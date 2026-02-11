@@ -8,6 +8,15 @@ import RegisterButton from "../components/RegisterButton";
 
 function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
+  const words = [
+    "CODE RECET",
+    "CODE RECET",
+    "CODE RECET",
+    "CODE RECET",
+    "CODE RECET",
+    "CODE RECET",
+    "CODE RECET",
+  ];
 
   return (
     <div id="landing">
@@ -196,6 +205,21 @@ function LandingPage() {
             <div className="border-2 border-custom-white rounded-lg px-6 py-4 text-center">
               <div className="text-xl lg:text-2xl font-bold text-custom-white font-satoshi_v">CET</div>
               <div className="text-xs lg:text-sm text-custom-white font-satoshi_v">Join Us At</div>
+            </div>
+          </div>
+          
+          <div className="lg:h-20 absolute bottom-0 w-full z-10 bg-custom-black inline-flex flex-nowrap border-2 border-l-0 border-r-0 border-custom-gray">
+            <div className="overflow-hidden relative">
+              <div className="flex animate-infinite-scroll space-x-16 sm:space-x-36 p-2 pt-3">
+                {words.concat(words).map((word, index) => (
+                  <li
+                    key={index}
+                    className="text-xl sm:text-lg lg:text-6xl list-none text-custom-gray font-thomeo whitespace-nowrap"
+                  >
+                    {word}
+                  </li>
+                ))}
+              </div>
             </div>
           </div>
         </div>
