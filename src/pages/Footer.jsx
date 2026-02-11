@@ -37,7 +37,7 @@ function Footer() {
           <div className="hidden md:flex justify-center items-center">
             <div
               className="apply-button"
-              data-hackathon-slug="code-recet-2"
+              data-hackathon-slug="code-recet-3"
               data-button-theme="dark"
               style={{
                 height: "44px",
@@ -107,7 +107,7 @@ function Footer() {
           <div className="flex md:hidden justify-center items-center px-4 mb-6">
             <div
               className="apply-button"
-              data-hackathon-slug="code-recet-2"
+              data-hackathon-slug="code-recet-3"
               data-button-theme="dark"
               style={{
                 height: "44px",

@@ -4,6 +4,7 @@ import cube from "../assets/Cube.png";
 import logo from "../assets/Logo copy.png";
 import menu from "../assets/menu_white.svg";
 import close from "../assets/close_white.svg";
+import devfolioLogo from "../assets/Devfolio/Devfolio_Logo-White.png";
 
 function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -101,12 +102,11 @@ function LandingPage() {
             {/* Right: Register Button */}
             <div className="flex-1 flex justify-end items-center gap-4">
               <div className="hidden sm:block">
-                <div
-                  className="apply-button"
-                  data-hackathon-slug="code-recet-3"
-                  data-button-theme="light"
-                  style={{ height: '44px', width: '312px' }}
-                ></div>
+                <div className="rounded-full px-4 py-2 cursor-pointer hover:bg-opacity-10 transition-colors" style={{ border: '1px solid #E6F85A4D' }}>
+                  <span className="font-tactic_sans text-custom-white text-sm lg:text-base">
+                    Register Now - It's Free
+                  </span>
+                </div>
               </div>
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -169,12 +169,11 @@ function LandingPage() {
                 </li>
                 {/* Mobile Register */}
                 <li className="text-left mt-8 pt-4">
-                  <div
-                    className="apply-button"
-                    data-hackathon-slug="code-recet-3"
-                    data-button-theme="light"
-                    style={{ height: '44px', width: '312px' }}
-                  ></div>
+                  <div className="rounded-full px-4 py-2 cursor-pointer inline-block" style={{ border: '1px solid #E6F85A4D' }}>
+                    <span className="font-tactic_sans text-custom-white text-base">
+                      Register Now - It's Free
+                    </span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -227,6 +226,17 @@ function LandingPage() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Devfolio Apply Button - Bottom */}
+      <div className="bg-custom-black flex flex-col items-center justify-center py-12 border-b border-custom-gray">
+        <img src={devfolioLogo} alt="DEVFOLIO LOGO" className="h-8 mb-6" />
+        <div
+          className="apply-button"
+          data-hackathon-slug="code-recet-3"
+          data-button-theme="light"
+          style={{ height: '44px', width: '312px' }}
+        ></div>
       </div>
     </div>
   );
