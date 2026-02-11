@@ -80,17 +80,18 @@ function LandingPage() {
             </div>
             
             {/* Center: Logo */}
-            <div className="cursor-pointer flex-shrink-0">
+            <div className="cursor-pointer flex-shrink-0 relative">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-green-400 opacity-30 blur-3xl rounded-full"></div>
               <img
                 src={logo}
-                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32"
+                className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 relative z-10"
               />
             </div>
             
             {/* Right: Register Button */}
             <div className="flex-1 flex justify-end items-center gap-4">
               <div className="hidden sm:block">
-                <div className="border border-custom-white rounded-full px-4 py-2 cursor-pointer hover:bg-custom-white hover:bg-opacity-10 transition-colors">
+                <div className="rounded-full px-4 py-2 cursor-pointer hover:bg-opacity-10 transition-colors" style={{ border: '1px solid #E6F85A4D' }}>
                   <span className="font-tactic_sans text-custom-white text-sm lg:text-base">
                     Register Now - It's Free
                   </span>
@@ -157,7 +158,7 @@ function LandingPage() {
                 </li>
                 {/* Mobile Register */}
                 <li className="text-left mt-8 pt-4">
-                  <div className="border border-custom-white rounded-full px-4 py-2 cursor-pointer inline-block">
+                  <div className="rounded-full px-4 py-2 cursor-pointer inline-block" style={{ border: '1px solid #E6F85A4D' }}>
                     <span className="font-tactic_sans text-custom-white text-base">
                       Register Now - It's Free
                     </span>
@@ -167,7 +168,7 @@ function LandingPage() {
             </div>
           </nav>
         </div>
-        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] relative">
+        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] relative mt-8 lg:mt-12">
           <h1 className="text-center">
             <div className="font-thomeo text-5xl lg:text-8xl" style={{ color: '#FFFFFA', lineHeight: '1.1' }}>
               CET<span className="font-satoshi_v">'</span>S
