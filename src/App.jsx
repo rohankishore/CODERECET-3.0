@@ -54,9 +54,9 @@ function App() {
         transition={{ duration: 0.8, delay: showIntro ? 0 : 0.3 }}
       >
         <LandingPage/>
+        <AboutUs/>
         <Countdown/>
         <RefreshReboot/>
-        <AboutUs/>
         <PerksSection/>
         <Prize/>
         <Sponsorship/>
