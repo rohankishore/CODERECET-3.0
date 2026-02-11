@@ -210,8 +210,10 @@ function LandingPage() {
           
           <div className="absolute bottom-24 lg:bottom-28 w-full px-4 lg:px-20 flex justify-between items-center z-30">
             <div
-              className="border border-[#E6F85A] rounded-lg px-6 py-4 text-center cursor-pointer"
+              className="border border-[#E6F85A] rounded-lg px-6 py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-[#E6F85A]/10"
               style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
+              onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
+              onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
               data-blendy-from="calendar"
               onClick={() => {
                 setShowCalendar(true);
@@ -227,8 +229,10 @@ function LandingPage() {
             </div>
             
             <div
-              className="border border-[#E6F85A] rounded-lg px-6 py-4 text-center cursor-pointer"
+              className="border border-[#E6F85A] rounded-lg px-6 py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-[#E6F85A]/10"
               style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
+              onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
+              onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
               data-blendy-from="location"
               onClick={() => {
                 setShowLocation(true);
