@@ -42,55 +42,55 @@ const Countdown = () => {
   return (
     <div
       id="countdown"
-      className="bg-custom-black px-8 lg:px-32 py-16 lg:py-24 border-b border-custom-gray"
+      className="bg-custom-black px-4 sm:px-8 lg:px-32 py-10 sm:py-16 lg:py-24 border-b border-custom-gray"
     >
-      <div className="max-w-4xl mx-auto border-2 border-custom-gray rounded-2xl px-8 lg:px-16 py-12 lg:py-16">
-        <div className="flex justify-center items-center gap-4 lg:gap-8">
+      <div className="max-w-4xl mx-auto border-2 border-custom-gray rounded-2xl px-4 sm:px-8 lg:px-16 py-8 sm:py-12 lg:py-16">
+        <div className="flex justify-center items-center gap-2 sm:gap-4 lg:gap-8">
           {/* Days */}
           <div className="text-center">
-            <div className="font-thomeo text-6xl lg:text-8xl text-custom-white">
+            <div className="font-thomeo text-4xl sm:text-6xl lg:text-8xl text-custom-white">
               {timeLeft.days}
             </div>
-            <div className="font-tactic_sans text-sm lg:text-base text-custom-white mt-2">
+            <div className="font-tactic_sans text-[10px] sm:text-sm lg:text-base text-custom-white mt-1 sm:mt-2">
               DAYS
             </div>
           </div>
           
           {/* Colon */}
-          <span className="font-thomeo text-6xl lg:text-8xl mb-8" style={{ color: '#E6F85A' }}>:</span>
+          <span className="font-thomeo text-4xl sm:text-6xl lg:text-8xl mb-5 sm:mb-8" style={{ color: '#E6F85A' }}>:</span>
           
           {/* Hours */}
           <div className="text-center">
-            <div className="font-thomeo text-6xl lg:text-8xl text-custom-white">
+            <div className="font-thomeo text-4xl sm:text-6xl lg:text-8xl text-custom-white">
               {timeLeft.hours}
             </div>
-            <div className="font-tactic_sans text-sm lg:text-base text-custom-white mt-2">
+            <div className="font-tactic_sans text-[10px] sm:text-sm lg:text-base text-custom-white mt-1 sm:mt-2">
               HOURS
             </div>
           </div>
           
           {/* Colon */}
-          <span className="font-thomeo text-6xl lg:text-8xl mb-8" style={{ color: '#E6F85A' }}>:</span>
+          <span className="font-thomeo text-4xl sm:text-6xl lg:text-8xl mb-5 sm:mb-8" style={{ color: '#E6F85A' }}>:</span>
           
           {/* Minutes */}
           <div className="text-center">
-            <div className="font-thomeo text-6xl lg:text-8xl text-custom-white">
+            <div className="font-thomeo text-4xl sm:text-6xl lg:text-8xl text-custom-white">
               {timeLeft.minutes}
             </div>
-            <div className="font-tactic_sans text-sm lg:text-base text-custom-white mt-2">
+            <div className="font-tactic_sans text-[10px] sm:text-sm lg:text-base text-custom-white mt-1 sm:mt-2">
               MINUTES
             </div>
           </div>
           
           {/* Colon */}
-          <span className="font-thomeo text-6xl lg:text-8xl mb-8" style={{ color: '#E6F85A' }}>:</span>
+          <span className="font-thomeo text-4xl sm:text-6xl lg:text-8xl mb-5 sm:mb-8" style={{ color: '#E6F85A' }}>:</span>
           
           {/* Seconds */}
           <div className="text-center">
-            <div className="font-thomeo text-6xl lg:text-8xl text-custom-white">
+            <div className="font-thomeo text-4xl sm:text-6xl lg:text-8xl text-custom-white">
               {timeLeft.seconds}
             </div>
-            <div className="font-tactic_sans text-sm lg:text-base text-custom-white mt-2">
+            <div className="font-tactic_sans text-[10px] sm:text-sm lg:text-base text-custom-white mt-1 sm:mt-2">
               SECONDS
             </div>
           </div>
