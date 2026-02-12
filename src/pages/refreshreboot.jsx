@@ -1,5 +1,29 @@
 ﻿import React, { useEffect } from "react";
 import devfolioLogo from "../assets/Devfolio/Devfolio_Logo-White.png";
+import OrbitCard from "../components/TiltCard";
+
+const cardData = [
+  {
+    title: "REGISTER",
+    text: "Sign up your team now. Share your innovative ideas to solve real problems.",
+    rotate: -12,
+  },
+  {
+    title: "BUILD",
+    text: "Code your solution using cutting-edge tech. Overcome challenges and bring your idea to life.",
+    rotate: -4,
+  },
+  {
+    title: "CONNECT",
+    text: "Collaborate with students across majors. Network with peers who can boost your project.",
+    rotate: 4,
+  },
+  {
+    title: "GROW",
+    text: "Level up your skills with expert feedback. Top teams earn prizes and resume credentials.",
+    rotate: 12,
+  },
+];
 
 export default function RefreshReboot() {
   useEffect(() => {
