@@ -1,6 +1,5 @@
 ﻿import React, { useEffect } from "react";
 import devfolioLogo from "../assets/Devfolio/Devfolio_Logo-White.png";
-import OrbitCard from "../components/TiltCard";
 
 const cardData = [
   {
@@ -56,17 +55,7 @@ export default function RefreshReboot() {
         ></div>
       </div>
 
-      {/* Cards Section */}
-      <div className="cards-section">
-        {cardData.map((card, i) => (
-          <OrbitCard
-            key={i}
-            title={card.title}
-            text={card.text}
-            rotate={card.rotate}
-          />
-        ))}
-      </div>
+      {/* Cards Section removed */}
     </div>
   );
 }
