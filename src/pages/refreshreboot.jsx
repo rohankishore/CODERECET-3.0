@@ -55,6 +55,18 @@ export default function RefreshReboot() {
           style={{ height: '44px', width: '312px' }}
         ></div>
       </div>
+
+      {/* Cards Section */}
+      <div className="cards-section">
+        {cardData.map((card, i) => (
+          <OrbitCard
+            key={i}
+            title={card.title}
+            text={card.text}
+            rotate={card.rotate}
+          />
+        ))}
+      </div>
     </div>
   );
 }
