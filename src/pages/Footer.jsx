@@ -16,38 +16,28 @@ import instagram from "../assets/instagram.svg";
 
 
 
+
 function Footer() {
   return (
-    <footer className="w-full min-h-[420px] flex items-center justify-center bg-gradient-to-b from-[#1A1A1A] via-[#e6f85a] to-[#e6f85a]">
-      <div className="w-full max-w-5xl mx-auto bg-transparent p-8 md:p-12 flex flex-col gap-8">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-          <div className="flex flex-col gap-6 w-full md:w-1/2">
-            <div className="flex items-center gap-4 mb-2">
-              <img src={logo} className="w-12 h-12" alt="Code Recet Logo" />
-              <span className="font-thomeo text-white text-3xl md:text-5xl">Code Recet</span>
-            </div>
-            <div className="w-full h-[2px] bg-[#e6f85a] mb-4"></div>
-            <nav className="flex flex-col gap-4 text-white text-lg font-poppins">
-              <a href="#landing" className="flex items-center gap-2"><span className="text-[#e6f85a] text-xl">&gt;</span> Home</a>
-              <a href="#about" className="flex items-center gap-2"><span className="text-[#e6f85a] text-xl">&gt;</span> About Us</a>
-              <a href="#events" className="flex items-center gap-2"><span className="text-[#e6f85a] text-xl">&gt;</span> Events</a>
-              <a href="#gallery" className="flex items-center gap-2"><span className="text-[#e6f85a] text-xl">&gt;</span> Gallery</a>
-              <a href="#team" className="flex items-center gap-2"><span className="text-[#e6f85a] text-xl">&gt;</span> Our Team</a>
-            </nav>
-            <div className="flex gap-8 mt-8">
-              <a href="https://twitter.com/coderecet" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="Twitter" className="w-10 h-10" /></a>
-              <a href="https://facebook.com/coderecet" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="Facebook" className="w-10 h-10" /></a>
-              <a href="https://discord.gg/coderecet" target="_blank" rel="noopener noreferrer"><img src={discord} alt="Discord" className="w-10 h-10" /></a>
-              <a href="https://linkedin.com/company/coderecet" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt="LinkedIn" className="w-10 h-10" /></a>
-              <a href="https://github.com/coderecet" target="_blank" rel="noopener noreferrer"><img src={github} alt="GitHub" className="w-10 h-10" /></a>
-            </div>
+    <footer className="w-full min-h-[420px] flex flex-col justify-between bg-gradient-to-b from-[#1A1A1A] via-[#e6f85a] to-[#e6f85a]">
+      <div className="w-full max-w-6xl mx-auto px-8 md:px-20 pt-16 pb-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+          <div className="flex-1">
+            <div className="font-thomeo text-white text-6xl md:text-8xl lg:text-[7rem] mb-8">CODE RECET</div>
+            <div className="text-black text-xl md:text-2xl mb-12 max-w-xl">CET's flagship hackathon for creative coders and innovators</div>
           </div>
-          <div className="flex flex-col items-end w-full md:w-1/2 gap-6">
-            <div className="text-white text-lg font-poppins mb-2 mt-2 md:mt-0">Hackathon Organized by :</div>
-            <img src={tinkerhub} className="w-48 h-auto mb-2" alt="Tinkerhub" />
-            <img src={iet} className="w-48 h-auto" alt="IET" />
+          <div className="flex flex-col items-end gap-6 mt-8 md:mt-0">
+            <a href="https://www.instagram.com/coderecet/" target="_blank" rel="noopener noreferrer" className="font-poppins text-black text-xl md:text-2xl">INSTAGRAM</a>
+            <a href="https://facebook.com/coderecet" target="_blank" rel="noopener noreferrer" className="font-poppins text-black text-xl md:text-2xl">FACEBOOK</a>
+            <a href="https://linkedin.com/company/coderecet" target="_blank" rel="noopener noreferrer" className="font-poppins text-black text-xl md:text-2xl">LINKEDIN</a>
+            <a href="https://twitter.com/coderecet" target="_blank" rel="noopener noreferrer" className="font-poppins text-black text-xl md:text-2xl">X</a>
           </div>
         </div>
+      </div>
+      <div className="w-full max-w-6xl mx-auto px-8 md:px-20 pb-4 flex flex-col md:flex-row justify-between items-center text-black text-base md:text-lg font-poppins">
+        <span>&copy; 2026 Code Recet</span>
+        <span>CET, Kerala, India</span>
+        <a href="#" className="underline">Privacy Policy</a>
       </div>
     </footer>
   );
