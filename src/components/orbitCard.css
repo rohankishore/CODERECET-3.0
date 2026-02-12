@@ -1,0 +1,122 @@
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .cards-section {
+    gap: 30px;
+    padding: 40px 16px;
+  }
+}
+
+.orbit-wrapper {
+  position: relative;
+  width: 230px;
+  height: 320px;
+}
+
+@media (max-width: 640px) {
+  .orbit-wrapper {
+    width: 160px;
+    height: 230px;
+  }
+}
+
+.orbit-ring {
+  position: absolute;
+  inset: -20px;
+  border: 1.5px solid #b6ff00;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 12px #b6ff00);
+  animation: spin 12s linear infinite;
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  background: radial-gradient(circle at top, #1b1b1b, #0a0a0a);
+  border-radius: 18px;
+  border: 1px solid #2a2a2a;
+  padding: 24px;
+  color: white;
+  box-shadow: 0 0 25px rgba(182, 255, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+}
+
+.card h3 {
+  color: #e6f85a;
+  font-family: "Thomeo", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 640px) {
+  .card h3 {
+    font-size: 1rem;
+  }
+}
+
+.card-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: #111;
+  border: 1px solid #333;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.card-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+
+@media (max-width: 640px) {
+  .card-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #aaa;
+  font-family: "Satoshi_v", sans-serif;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .card p {
+    font-size: 0.7rem;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
