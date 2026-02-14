@@ -39,7 +39,7 @@ export default function RefreshReboot() {
   }, []);
 
   return (
-    <div className="bg-custom-black px-8 lg:px-32 py-16 lg:py-24 border-b border-custom-gray">
+    <div className="bg-custom-black px-8 lg:px-32 py-16 lg:py-24">
 
       <h1 className="font-thomeo text-custom-white text-5xl sm:text-6xl lg:text-8xl text-left leading-tight">
         REFRESH <span style={{ color: "#E6F85A" }}>IDEAS.</span>

@@ -62,8 +62,8 @@ function App() {
         <Prize/>
         <Sponsorship/>
         <Gallery/>
-        <FAQ/>
-        <Footer/> */}
+        <FAQ/> */}
+        <Footer/>
       </motion.div>
     </div>
   )
