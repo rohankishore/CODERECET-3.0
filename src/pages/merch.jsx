@@ -13,8 +13,8 @@ export default function MerchSection() {
         <img 
           src={merchMask} 
           alt="Merch Mask" 
-          className="w-full h-auto mt-1"
-          style={{ width: '100vw', left: '50%', right: '50%', transform: 'translateX(-50%)', position: 'relative', maxHeight: '45vh', objectFit: 'cover', opacity: 0.85 }}
+          className="w-full mt-1"
+          style={{ width: '100vw', height: 'auto', left: '50%', right: '50%', transform: 'translateX(-50%)', position: 'relative', objectFit: 'fill', opacity: 0.85 }}
         />
         <p className="text-custom-white text-center text-lg sm:text-xl mb-8 max-w-xl mt-4" style={{ fontFamily: 'TacticSans' }}>
           Every one who gets selected gets Goodies!<br/>T-Shirts, stickers, you name it!
