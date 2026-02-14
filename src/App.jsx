@@ -11,7 +11,7 @@ import Gallery from "./pages/gallery"
 import PerksSection from "./pages/perks"
 import RefreshReboot from "./pages/refreshreboot"
 import FAQ from "./pages/faq"
-
+import Merch from "./pages/Merch"
 
 function App() {
   const [showIntro, setShowIntro] = useState(false)
@@ -62,6 +62,7 @@ function App() {
         <Prize/>
         <Sponsorship/>
         <Gallery/>
+        <Merch />
         <FAQ/> */}
         <Footer/>
       </motion.div>
