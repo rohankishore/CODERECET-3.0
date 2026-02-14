@@ -29,6 +29,7 @@
     will-change: transform;
   }
   
+  
   .card-3d div {
     position: absolute;
     width: 90px;

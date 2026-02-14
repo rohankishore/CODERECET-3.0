@@ -10,7 +10,7 @@ import Sponsorship from "./pages/sponsorship"
 import Gallery from "./pages/gallery"
 import PerksSection from "./pages/perks"
 import RefreshReboot from "./pages/refreshreboot"
-import FAQ from "./pages/faq"
+import FAQSection from "./pages/faq"
 
 
 function App() {
@@ -61,8 +61,8 @@ function App() {
         {/* <PerksSection/>
         <Prize/>
         <Sponsorship/>
-        <Gallery/>
-        <FAQ/> */}
+        <Gallery/>*/}
+        <FAQSection/>
         <Footer/>
       </motion.div>
     </div>
