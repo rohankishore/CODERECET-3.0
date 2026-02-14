@@ -1,49 +1,51 @@
-import { useEffect, useState } from "react";
-import { useIsDesktop } from "../hooks/media";
+import { useState } from "react";
 
-const Card = ({
-  id,
-  flipped,
-  onFlip,
-  defaultText,
-  flippedText,
-  extraClasses = "",
-}) => {
-  const isDesktop = useIsDesktop();
-  const [animating, setAnimating] = useState(false);
-
-  const handleClick = () => {
-    if (animating) return;
-
-    if (!isDesktop) {
-      onFlip(id);
-      return;
-    }
-
-    setAnimating(true);
-    setTimeout(() => onFlip(id), 250);
-    setTimeout(() => setAnimating(false), 500);
-  };
-
+export default function FAQCard({ number, question, answer }) {
   return (
-    <div
-      onClick={handleClick}
-      className={`
-        cursor-pointer transform transition-all ease-in-out duration-700
-        ${flipped
-          ? "bg-white lg:-translate-y-52 lg:scale-100 scale-110 text-sm md:text-3xl"
-          : "bg-custom-yellow text-2xl md:text-5xl md:scale-100 scale-90"}
-        ${animating ? "md:animate-rotateRight" : ""}
-        flex border-black border-[1.5px] lg:-skew-y-12 my-10 shadow-2xl 
-        items-center rounded-lg w-[300px] h-[150px] md:w-[545px] md:h-[273px] ${extraClasses}
-        ${isDesktop ? "md:hover:-translate-y-52" : "md:!scale-100 md:hover:!scale-100"}
-      `}
-    >
-      <p className="font-satoshi_v font-extrabold md:font-bold mx-auto p-10 text-center">
-        {flipped ? flippedText : defaultText}
+<div
+  className="relative rounded-[44px] px-10 py-12 min-h-[217px] overflow-hidden flex flex-col justify-between"
+  style={{
+    background: `linear-gradient(to top right,
+      #A3A3A3 0%,
+      #212121 15%,
+      #121212 30%,
+      #0e0e0e 50%,
+      #101010 70%,
+      #1b1b1b 85%,
+      #212121 100%
+    )`
+  }}
+>
+  
+  <div className="absolute inset-0 opacity-[0.15] pointer-events-none mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+      
+      {/* Large Number */}
+      <span className="
+        font-thomeo
+        text-[200px]
+        text-[#E6F85A]
+        absolute
+        bottom-[-40px]
+        left-6
+        leading-none
+      ">
+        {number}
+      </span>
+
+      {/* Question */}
+      <p className="
+        font-tactic
+        text-[29px]
+        text-[#FFFFFA]
+        text-right
+        relative
+        z-10
+        max-w-[360px]
+        ml-auto
+      ">
+        {question}
       </p>
+
     </div>
   );
-};
-
-export default Card;
+}
