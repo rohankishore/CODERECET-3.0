@@ -1,3 +1,39 @@
+/* FAQ Flip Card Styles */
+.faq-flip-card {
+  perspective: 1200px;
+  width: 100%;
+  min-height: 217px;
+  cursor: pointer;
+}
+
+.faq-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4,0.2,0.2,1);
+  transform-style: preserve-3d;
+}
+
+.faq-flip-card:hover .faq-flip-card-inner,
+.faq-flip-card:focus-within .faq-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.faq-flip-card-front, .faq-flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.faq-flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 @keyframes autoRun3d {
     from {
       transform: perspective(800px) rotateY(-360deg);
