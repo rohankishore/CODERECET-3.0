@@ -10,6 +10,7 @@ import Sponsorship from "./pages/sponsorship"
 import Gallery from "./pages/gallery"
 import PerksSection from "./pages/perks"
 import RefreshReboot from "./pages/refreshreboot"
+import OurSponsors from "./pages/OurSponsors"
 import MerchSection from "./pages/merch"
 import FAQSection from "./pages/faq"
 
@@ -58,6 +59,7 @@ function App() {
         <AboutUs/>
         <Countdown/>
         <RefreshReboot/>
+        <OurSponsors/>
         <MerchSection/>
         {/* Hidden sections */}
         {/* <PerksSection/>
