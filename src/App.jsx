@@ -10,8 +10,9 @@ import Sponsorship from "./pages/sponsorship"
 import Gallery from "./pages/gallery"
 import PerksSection from "./pages/perks"
 import RefreshReboot from "./pages/refreshreboot"
-import FAQ from "./pages/faq"
 import OurSponsors from "./pages/OurSponsors"
+import MerchSection from "./pages/merch"
+import FAQSection from "./pages/faq"
 
 
 function App() {
@@ -59,12 +60,13 @@ function App() {
         <Countdown/>
         <RefreshReboot/>
         <OurSponsors/>
+        <MerchSection/>
         {/* Hidden sections */}
         {/* <PerksSection/>
         <Prize/>
         <Sponsorship/>
-        <Gallery/>
-        <FAQ/> */}
+        <Gallery/>*/}
+        <FAQSection/>
         <Footer/>
       </motion.div>
     </div>
