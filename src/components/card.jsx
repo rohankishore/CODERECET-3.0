@@ -27,12 +27,12 @@ export default function FAQCard({ number, question, answer }) {
           </p>
         </div>
         {/* Back Side */}
-        <div className="faq-flip-card-back relative rounded-[44px] px-10 py-12 min-h-[217px] overflow-hidden flex flex-col justify-between"
+        <div className="faq-flip-card-back flex items-center justify-center rounded-[44px] px-10 py-12 min-h-[217px] overflow-hidden"
           style={{
             background: `#121212`
           }}
         >
-          <p className="font-tactic text-[24px] text-[#FFFFFA] text-left relative z-10 max-w-[360px] ml-auto">
+          <p className="font-tactic text-[24px] text-[#FFFFFA] text-center w-full max-w-[360px] mx-auto">
             {answer}
           </p>
         </div>
