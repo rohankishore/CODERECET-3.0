@@ -1,4 +1,8 @@
 import { useState } from "react";
+import tunnelImg from "../assets/tunnel.png";
+
+
+
 import FAQCard from "../components/card";
 
 const faqs = [
@@ -39,9 +43,20 @@ const faqs = [
 
 export default function FAQSection() {
   return(
-   <section className="bg-[#1a1a1a] px-10 py-24">
+    <section
+      className="bg-[#1a1a1a] px-10 py-24 relative"
+      style={{
+        overflow: 'hidden',
+      }}
+    >
+      <img
+        src={tunnelImg}
+        alt="Tunnel Background"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        style={{ pointerEvents: 'none', opacity: 0.18 }}
+      />
 
-  <div className="mb-20">
+      <div className="mb-20 relative z-10">
 
     <h3 className="
       font-hoops_brother
@@ -72,7 +87,7 @@ export default function FAQSection() {
 "></div>
 
 
-<div className="grid gap-y-12 gap-x-10 md:grid-cols-2 font-tactic_sans">
+      <div className="grid gap-y-12 gap-x-10 md:grid-cols-2 font-tactic_sans relative z-10">
         {faqs.map((faq, index) => (
           <FAQCard 
             key={index} 
@@ -82,7 +97,7 @@ export default function FAQSection() {
           />
         ))}
       </div>
-</section>
+    </section>
 
 
   );
