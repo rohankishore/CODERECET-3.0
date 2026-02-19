@@ -57,7 +57,7 @@ const Countdown = () => {
           </div>
           
           {/* Colon */}
-          <span className="font-thomeo text-4xl sm:text-6xl lg:text-8xl mb-5 sm:mb-8" style={{ color: '#E6F85A' }}>:</span>
+          <span className="font-thomeo text-4xl sm:text-6xl lg:text-8xl mb-5 sm:mb-8" style={{ color: 'var(--color-secondary)' }}>:</span>
           
           {/* Hours */}
           <div className="text-center">
@@ -70,7 +70,7 @@ const Countdown = () => {
           </div>
           
           {/* Colon */}
-          <span className="font-thomeo text-4xl sm:text-6xl lg:text-8xl mb-5 sm:mb-8" style={{ color: '#E6F85A' }}>:</span>
+          <span className="font-thomeo text-4xl sm:text-6xl lg:text-8xl mb-5 sm:mb-8" style={{ color: 'var(--color-secondary)' }}>:</span>
           
           {/* Minutes */}
           <div className="text-center">
@@ -83,7 +83,7 @@ const Countdown = () => {
           </div>
           
           {/* Colon */}
-          <span className="font-thomeo text-4xl sm:text-6xl lg:text-8xl mb-5 sm:mb-8" style={{ color: '#E6F85A' }}>:</span>
+          <span className="font-thomeo text-4xl sm:text-6xl lg:text-8xl mb-5 sm:mb-8" style={{ color: 'var(--color-secondary)' }}>:</span>
           
           {/* Seconds */}
           <div className="text-center">

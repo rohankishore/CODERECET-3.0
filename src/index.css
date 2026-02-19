@@ -1,44 +1,29 @@
 @font-face {
-    font-family: 'Seasons_r';
-    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-theseasons-reg.otf');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-@font-face {
-    font-family: 'Satoshi_v';
-    src: url('/fonts/Satoshi/TTF/Satoshi-Variable.ttf');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-@font-face {
-    font-family: 'Bebas';
-    src: url('/fonts/Bebas_Neue/BebasNeue-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-@font-face {
     font-family: 'Thomeo';
-    src: url('/src/assets/fonts/Thomeo .ttf');
+    src: url('/fonts/Thomeo .ttf');
     font-weight: normal;
     font-style: normal;
   }
 
 @font-face {
     font-family: 'HoopsBrother';
-    src: url('/src/assets/fonts/The Brother Hoops.ttf');
+    src: url('/fonts/The Brother Hoops.ttf');
     font-weight: normal;
     font-style: normal;
   }
 
 @font-face {
     font-family: 'TacticSans';
-    src: url('/src/assets/fonts/TacticSans-Reg.otf');
+    src: url('/fonts/TacticSans-Reg.otf');
     font-weight: normal;
     font-style: normal;
   }
+
+:root {
+  --color-black: #1a1a1a;
+  --color-white: #fffffa;
+  --color-secondary: #E6F85A;
+}
 
 @tailwind base;
 @tailwind components;

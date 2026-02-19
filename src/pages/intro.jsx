@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import gif from "../assets/cube_float1 1.gif";
 
 function IntroPage({ onScrollDown }) {
   const [scrollIndicator, setScrollIndicator] = useState(true);
@@ -86,7 +85,7 @@ function IntroPage({ onScrollDown }) {
         className="relative -mt-8 lg:-mt-16"
       >
         <img
-          src={gif}
+          src="/assets/cube_float1 1.gif"
           alt="Floating Cube"
           className="w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] object-contain"
         />

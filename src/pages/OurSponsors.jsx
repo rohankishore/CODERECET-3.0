@@ -1,7 +1,4 @@
 /* eslint-disable react/prop-types */
-import devfolio from "../assets/Devfolio_Logo-White.svg";
-import armada from "../assets/Armada.png";
-import buildclub from "../assets/BuildClub.png";
 
 const sponsorCardStyle = {
   padding: "1.04px",
@@ -55,13 +52,13 @@ function OurSponsors() {
           <div className="max-w-[442px] leading-none">
             <p
               className="font-hoops_brother text-[44px] md:text-[47px]"
-              style={{ color: "#E6F85A" }}
+              style={{ color: "var(--color-secondary)" }}
             >
               OUR
             </p>
             <p
               className="font-thomeo -mt-3 text-[58px] md:text-[76px] uppercase"
-              style={{ color: "#FFFFFA" }}
+              style={{ color: "var(--color-white)" }}
             >
               Sponsors
             </p>
@@ -70,7 +67,7 @@ function OurSponsors() {
           <div className="mt-14 md:mt-[66px]">
             <h3
               className="text-center font-tactic_sans text-[29px] tracking-[0.05em]"
-              style={{ color: "#FFFFFA" }}
+              style={{ color: "var(--color-white)" }}
             >
               Title Sponsor
             </h3>
@@ -81,7 +78,7 @@ function OurSponsors() {
                 innerClassName="px-8 md:px-12"
               >
                 <img
-                  src={armada}
+                  src="/assets/sponsor/Armada.png"
                   alt="Armada"
                   className="w-[78%] md:w-[62%] max-w-[768px] h-auto object-contain"
                   style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
@@ -93,7 +90,7 @@ function OurSponsors() {
           <div className="mt-12 md:mt-[75px]">
             <h3
               className="text-center font-tactic_sans text-[29px] tracking-[0.05em]"
-              style={{ color: "#FFFFFA" }}
+              style={{ color: "var(--color-white)" }}
             >
               Associate Sponsors
             </h3>
@@ -107,7 +104,7 @@ function OurSponsors() {
                   className="rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-custom-yellow"
                 >
                   <img
-                    src={devfolio}
+                    src="/assets/sponsor/Devfolio_Logo-White.svg"
                     alt="Devfolio"
                     className="h-[32px] sm:h-[48px] md:h-[64px] w-auto object-contain"
                   />
@@ -116,7 +113,7 @@ function OurSponsors() {
 
               <SponsorBox className="h-[140px] sm:h-[160px] md:h-[178px]" innerClassName="p-4">
                 <img
-                  src={buildclub}
+                  src="/assets/sponsor/BuildClub.png"
                   alt="BuildClub"
                   className="h-[68px] w-[68px] sm:h-[92px] sm:w-[92px] md:h-[122px] md:w-[122px] object-cover rounded-2xl"
                 />

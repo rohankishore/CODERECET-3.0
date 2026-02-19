@@ -4,12 +4,7 @@ import IntroPage from "./pages/intro"
 import LandingPage from "./pages/landing"
 import Countdown from "./pages/countdown"
 import AboutUs from "./pages/aboutus"
-import Prize from "./pages/prize"
 import Footer from "./pages/Footer"
-import Sponsorship from "./pages/sponsorship"
-import Gallery from "./pages/gallery"
-import PerksSection from "./pages/perks"
-import RefreshReboot from "./pages/refreshreboot"
 import OurSponsors from "./pages/OurSponsors"
 import MerchSection from "./pages/merch"
 import FAQSection from "./pages/faq"
@@ -58,14 +53,8 @@ function App() {
         <LandingPage/>
         <AboutUs/>
         <Countdown/>
-        <RefreshReboot/>
         <OurSponsors/>
         <MerchSection/>
-        {/* Hidden sections */}
-        {/* <PerksSection/>
-        <Prize/>
-        <Sponsorship/>
-        <Gallery/>*/}
         <FAQSection/>
         <Footer/>
       </motion.div>

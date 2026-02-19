@@ -8,10 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "custom-black":'#1A1A1A',
+        "custom-black":'var(--color-black)',
         'custom-yellow': '#C88D28',
-        'custom-white': '#E6E6FA',
-        'custom-gray':'#9C9C9C'
+        'custom-white': 'var(--color-white)',
+        'custom-gray':'#9C9C9C',
+        'custom-secondary': 'var(--color-secondary)'
       },
       fontFamily: {
         seasons_r:['Seasons_r'],

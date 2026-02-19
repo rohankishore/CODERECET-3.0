@@ -2,12 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { Link } from "react-scroll";
 import { createBlendy } from "blendy";
-import cube from "../assets/Cube.png";
-import grid from "../assets/Grid.png";
-import logo from "../assets/Logo copy.png";
-import menu from "../assets/menu_white.svg";
-import close from "../assets/close_white.svg";
-import devfolioLogo from "../assets/Devfolio/Devfolio_Logo-White.png";
 
 function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -95,7 +89,7 @@ function LandingPage() {
             <div className="cursor-pointer flex-shrink-0 relative">
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-green-400 opacity-30 blur-3xl rounded-full"></div>
               <img
-                src={logo}
+                src="/assets/logo/Logo copy.png"
                 className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 relative z-10"
               />
             </div>
@@ -103,7 +97,7 @@ function LandingPage() {
             {/* Right: Register Button */}
             <div className="flex-1 flex justify-end items-center gap-4">
               <div className="hidden sm:block">
-                <div className="rounded-full px-4 py-2 cursor-pointer hover:bg-opacity-10 transition-colors" style={{ border: '1px solid #E6F85A4D' }}>
+                <div className="rounded-full px-4 py-2 cursor-pointer hover:bg-opacity-10 transition-colors" style={{ border: '1px solid rgba(230, 248, 90, 0.3)' }}>
                   <span className="font-tactic_sans text-custom-white text-sm lg:text-base">
                     Register Now - It's Free
                   </span>
@@ -114,7 +108,7 @@ function LandingPage() {
                 className="inline-block sm:hidden text-custom-white z-50 focus:outline-none"
               >
                 <div className="w-10 h-10 bg-custom-black rounded-sm flex items-center justify-center">
-                  <img src={isOpen ? close : menu} className="w-6 h-6" />
+                  <img src={isOpen ? "/assets/close_white.svg" : "/assets/menu_white.svg"} className="w-6 h-6" />
                 </div>
               </button>
             </div>
@@ -170,7 +164,7 @@ function LandingPage() {
                 </li>
                 {/* Mobile Register */}
                 <li className="text-left mt-8 pt-4">
-                  <div className="rounded-full px-4 py-2 cursor-pointer inline-block" style={{ border: '1px solid #E6F85A4D' }}>
+                  <div className="rounded-full px-4 py-2 cursor-pointer inline-block" style={{ border: '1px solid rgba(230, 248, 90, 0.3)' }}>
                     <span className="font-tactic_sans text-custom-white text-base">
                       Register Now - It's Free
                     </span>
@@ -183,20 +177,20 @@ function LandingPage() {
 
         <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] relative mt-8 lg:mt-12 w-full">
           <h1 className="text-center w-full px-2 sm:px-0">
-            <div className="font-thomeo text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" style={{ color: '#FFFFFA', lineHeight: '1.1' }}>
+            <div className="font-thomeo text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" style={{ color: 'var(--color-white)', lineHeight: '1.1' }}>
               CET<span className="font-satoshi_v">'</span>S
             </div>
-            <div className="font-thomeo text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" style={{ color: '#FFFFFA', lineHeight: '1.1' }}>
+            <div className="font-thomeo text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" style={{ color: 'var(--color-white)', lineHeight: '1.1' }}>
               BIGGEST HACKATHON
             </div>
-            <div className="font-hoops_brother text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl mt-2 sm:mt-4 relative z-10" style={{ color: '#E6F85A' }}>
+            <div className="font-hoops_brother text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl mt-2 sm:mt-4 relative z-10" style={{ color: 'var(--color-secondary)' }}>
               IS BACK.
             </div>
           </h1>
 
           <div className="relative flex items-center justify-center w-full" style={{ minHeight: '180px' }}>
             <img
-              src={grid}
+              src="/assets/Grid.png"
               alt="Grid"
               className="absolute left-1/2 -translate-x-1/2 bottom-[-10px] sm:bottom-[-30px] w-[150vw] sm:w-[120vw] max-w-none pointer-events-none select-none z-10"
               draggable="false"
@@ -204,7 +198,7 @@ function LandingPage() {
             />
             <img
               className="z-20 relative -mt-10 sm:-mt-20 lg:-mt-32 w-[70vw] max-w-[400px]"
-              src={cube}
+              src="/assets/Cube.png"
               alt="Cube"
               style={{ minWidth: '160px', width: '70vw', maxWidth: '400px' }}
             />
@@ -212,7 +206,7 @@ function LandingPage() {
 
           <div className="absolute bottom-8 sm:bottom-24 lg:bottom-28 w-full px-2 sm:px-4 lg:px-20 flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0 z-30">
             <div
-              className="border border-[#E6F85A] rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-[#E6F85A]/10 bg-opacity-80 backdrop-blur-sm"
+              className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
               style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
               onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
               onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
@@ -231,7 +225,7 @@ function LandingPage() {
             </div>
 
             <div
-              className="border border-[#E6F85A] rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-[#E6F85A]/10 bg-opacity-80 backdrop-blur-sm"
+              className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
               style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
               onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
               onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
@@ -275,7 +269,7 @@ function LandingPage() {
             }}
           />
           <div
-            className="bg-[#1a1a1a] border-2 border-[#E6F85A] rounded-xl p-6 w-[90vw] max-w-[500px] relative z-10"
+            className="bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[500px] relative z-10"
             data-blendy-to="location"
           >
             <div>
@@ -287,7 +281,7 @@ function LandingPage() {
                     blendyRef.current?.untoggle('location', () => setShowLocation(false));
                   }}
                 >
-                  <img src={close} className="w-5 h-5" />
+                  <img src="/assets/close_white.svg" className="w-5 h-5" />
                 </button>
               </div>
               <div className="rounded-lg overflow-hidden" style={{ filter: 'invert(90%) hue-rotate(180deg)' }}>
@@ -315,7 +309,7 @@ function LandingPage() {
             }}
           />
           <div
-            className="bg-[#1a1a1a] border-2 border-[#E6F85A] rounded-xl p-6 w-[90vw] max-w-[400px] relative z-10"
+            className="bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[400px] relative z-10"
             data-blendy-to="calendar"
           >
             <div>
@@ -327,10 +321,10 @@ function LandingPage() {
                     blendyRef.current?.untoggle('calendar', () => setShowCalendar(false));
                   }}
                 >
-                  <img src={close} className="w-5 h-5" />
+                  <img src="/assets/close_white.svg" className="w-5 h-5" />
                 </button>
               </div>
-              <div className="bg-[#2a2a2a] rounded-lg p-4">
+              <div className="bg-[#2a2a2a] rounded-lg p-4 border border-[#333333]">
                 <div className="text-center text-custom-white font-satoshi_v mb-4">
                   <div className="text-lg font-bold">March 2026</div>
                 </div>
@@ -343,7 +337,7 @@ function LandingPage() {
                       key={i}
                       className={`p-2 rounded-md ${
                         i + 1 === 13
-                          ? 'bg-[#E6F85A] text-black font-bold'
+                          ? 'bg-custom-secondary text-black font-bold'
                           : 'hover:bg-[#3a3a3a]'
                       }`}
                     >
@@ -354,7 +348,7 @@ function LandingPage() {
               </div>
               <button
                 className="w-full mt-4 py-3 rounded-lg font-satoshi_v font-bold text-black"
-                style={{ backgroundColor: '#E6F85A' }}
+                style={{ backgroundColor: 'var(--color-secondary)' }}
               >
                 Add to Calendar
               </button>

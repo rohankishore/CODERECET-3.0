@@ -19,10 +19,10 @@ export default function FAQCard({ number, question, answer }) {
           }}
         >
           <div className="absolute inset-0 opacity-[0.15] pointer-events-none mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-          <span className="font-thomeo text-[200px] text-[#E6F85A] absolute bottom-[-40px] left-6 leading-none">
+          <span className="font-thomeo text-[200px] text-custom-secondary absolute bottom-[-40px] left-6 leading-none">
             {number}
           </span>
-          <p className="font-tactic text-[29px] text-[#FFFFFA] text-right relative z-10 max-w-[360px] ml-auto">
+          <p className="font-tactic text-[29px] text-custom-white text-right relative z-10 max-w-[360px] ml-auto">
             {question}
             
           </p>
@@ -33,7 +33,7 @@ export default function FAQCard({ number, question, answer }) {
             background: `#121212`
           }}
         >
-          <p className="font-tactic text-[24px] text-[#FFFFFA] text-center w-full max-w-[360px] mx-auto">
+          <p className="font-tactic text-[24px] text-custom-white text-center w-full max-w-[360px] mx-auto">
             {answer}
           </p>
         </div>

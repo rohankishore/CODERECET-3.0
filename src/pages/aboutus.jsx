@@ -8,7 +8,7 @@ function AboutUs() {
     >
       <div className="max-w-6xl w-full">
         {/* About Header */}
-        <h1 className="font-hoops_brother text-6xl lg:text-8xl mb-4" style={{ color: '#E6F85A' }}>
+        <h1 className="font-hoops_brother text-6xl lg:text-8xl mb-4" style={{ color: 'var(--color-secondary)' }}>
           ABOUT
         </h1>
         

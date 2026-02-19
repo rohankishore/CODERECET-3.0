@@ -1,5 +1,4 @@
 import { useState } from "react";
-import tunnelImg from "../assets/tunnel.png";
 
 
 
@@ -44,13 +43,13 @@ const faqs = [
 export default function FAQSection() {
   return(
     <section
-      className="bg-[#1a1a1a] px-10 py-24 relative"
+      className="bg-custom-black px-10 py-24 relative"
       style={{
         overflow: 'hidden',
       }}
     >
       <img
-        src={tunnelImg}
+        src="/assets/tunnel.png"
         alt="Tunnel Background"
         className="absolute inset-0 w-full h-full object-cover z-0"
         style={{ pointerEvents: 'none', opacity: 0.18 }}
@@ -61,7 +60,7 @@ export default function FAQSection() {
     <h3 className="
       font-hoops_brother
       text-[47px]
-      text-[#E6F85A]
+      text-custom-secondary
       leading-none
     ">
       Frequently Asked
@@ -71,7 +70,7 @@ export default function FAQSection() {
       font-thomeo
       text-[76px]
       uppercase
-      text-[#FFFFFA]
+      text-custom-white
       leading-none
     ">
       QUESTIONS
