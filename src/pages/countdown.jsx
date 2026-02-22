@@ -42,55 +42,71 @@ const Countdown = () => {
   return (
     <div
       id="countdown"
-      className="bg-custom-black px-4 sm:px-8 lg:px-32 py-10 sm:py-16 lg:py-24 border-b border-custom-gray"
+      className="bg-custom-black px-4 sm:px-8 lg:px-24 py-10 sm:py-16 lg:py-24"
     >
-      <div className="max-w-4xl mx-auto border-2 border-custom-gray rounded-2xl px-4 sm:px-8 lg:px-16 py-8 sm:py-12 lg:py-16">
-        <div className="flex justify-center items-center gap-2 sm:gap-4 lg:gap-8">
+      <div
+        className="w-full rounded-[24px] lg:rounded-[32px] overflow-hidden pt-4 pb-6 px-4 lg:pt-[16px] lg:pb-[29px] lg:px-[16px]"
+        style={{
+          border: '1.039px solid #e6f85a',
+          backgroundImage:
+            'linear-gradient(174.058deg, rgba(250, 250, 250, 0.3) 151.95%, rgba(8, 8, 8, 0.3) 55.324%, rgba(107, 107, 107, 0.3) 202.54%)',
+        }}
+      >
+        <div className="flex justify-between md:justify-center items-center w-full md:gap-8 lg:gap-[60px]">
           {/* Days */}
-          <div className="text-center">
-            <div className="font-thomeo text-4xl sm:text-6xl lg:text-8xl text-custom-white">
+          <div className="flex flex-col items-center justify-center">
+            <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-custom-white leading-none">
               {timeLeft.days}
             </div>
-            <div className="font-tactic_sans text-[10px] sm:text-sm lg:text-base text-custom-white mt-1 sm:mt-2">
+            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 lg:mt-6 tracking-widest">
               DAYS
             </div>
           </div>
-          
+
           {/* Colon */}
-          <span className="font-thomeo text-4xl sm:text-6xl lg:text-8xl mb-5 sm:mb-8" style={{ color: 'var(--color-secondary)' }}>:</span>
-          
+          <div className="flex flex-col items-center justify-center pb-6 sm:pb-8 lg:pb-[45px] gap-2 lg:gap-[28px]">
+            <div className="w-2 h-2 sm:w-3 sm:h-3 lg:w-5 lg:h-5 rounded-full bg-custom-secondary"></div>
+            <div className="w-2 h-2 sm:w-3 sm:h-3 lg:w-5 lg:h-5 rounded-full bg-custom-secondary"></div>
+          </div>
+
           {/* Hours */}
-          <div className="text-center">
-            <div className="font-thomeo text-4xl sm:text-6xl lg:text-8xl text-custom-white">
+          <div className="flex flex-col items-center justify-center">
+            <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-custom-white leading-none">
               {timeLeft.hours}
             </div>
-            <div className="font-tactic_sans text-[10px] sm:text-sm lg:text-base text-custom-white mt-1 sm:mt-2">
+            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 lg:mt-6 tracking-widest">
               HOURS
             </div>
           </div>
-          
+
           {/* Colon */}
-          <span className="font-thomeo text-4xl sm:text-6xl lg:text-8xl mb-5 sm:mb-8" style={{ color: 'var(--color-secondary)' }}>:</span>
-          
+          <div className="flex flex-col items-center justify-center pb-6 sm:pb-8 lg:pb-[45px] gap-2 lg:gap-[28px]">
+            <div className="w-2 h-2 sm:w-3 sm:h-3 lg:w-5 lg:h-5 rounded-full bg-custom-secondary"></div>
+            <div className="w-2 h-2 sm:w-3 sm:h-3 lg:w-5 lg:h-5 rounded-full bg-custom-secondary"></div>
+          </div>
+
           {/* Minutes */}
-          <div className="text-center">
-            <div className="font-thomeo text-4xl sm:text-6xl lg:text-8xl text-custom-white">
+          <div className="flex flex-col items-center justify-center">
+            <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-custom-white leading-none">
               {timeLeft.minutes}
             </div>
-            <div className="font-tactic_sans text-[10px] sm:text-sm lg:text-base text-custom-white mt-1 sm:mt-2">
+            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 lg:mt-6 tracking-widest">
               MINUTES
             </div>
           </div>
-          
+
           {/* Colon */}
-          <span className="font-thomeo text-4xl sm:text-6xl lg:text-8xl mb-5 sm:mb-8" style={{ color: 'var(--color-secondary)' }}>:</span>
-          
+          <div className="flex flex-col items-center justify-center pb-6 sm:pb-8 lg:pb-[45px] gap-2 lg:gap-[28px]">
+            <div className="w-2 h-2 sm:w-3 sm:h-3 lg:w-5 lg:h-5 rounded-full bg-custom-secondary"></div>
+            <div className="w-2 h-2 sm:w-3 sm:h-3 lg:w-5 lg:h-5 rounded-full bg-custom-secondary"></div>
+          </div>
+
           {/* Seconds */}
-          <div className="text-center">
-            <div className="font-thomeo text-4xl sm:text-6xl lg:text-8xl text-custom-white">
+          <div className="flex flex-col items-center justify-center">
+            <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-custom-white leading-none">
               {timeLeft.seconds}
             </div>
-            <div className="font-tactic_sans text-[10px] sm:text-sm lg:text-base text-custom-white mt-1 sm:mt-2">
+            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 lg:mt-6 tracking-widest">
               SECONDS
             </div>
           </div>
