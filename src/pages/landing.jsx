@@ -118,7 +118,7 @@ function LandingPage() {
                 className="inline-block sm:hidden text-custom-white z-50 focus:outline-none"
               >
                 <div className="w-8 h-8 bg-transparent flex items-center justify-center">
-                  <img src={isOpen ? "/assets/close_white.svg" : "/assets/menu_white.svg"} className="w-6 h-6" />
+                  <img src={isOpen ? "/assets/navbar/close_white.svg" : "/assets/navbar/menu_white.svg"} className="w-6 h-6" />
                 </div>
               </button>
             </div>
@@ -210,7 +210,7 @@ function LandingPage() {
 
           <div className="relative flex items-center justify-center w-full" style={{ minHeight: '180px' }}>
             <img
-              src="/assets/Grid.png"
+              src="/assets/landing/Grid.png"
               alt="Grid"
               className="absolute left-1/2 -translate-x-1/2 bottom-[-10px] sm:bottom-[-30px] w-[150vw] sm:w-[120vw] max-w-none pointer-events-none select-none z-10"
               draggable="false"
@@ -218,7 +218,7 @@ function LandingPage() {
             />
             <img
               className="z-20 relative -mt-10 sm:-mt-20 lg:-mt-32 w-[70vw] max-w-[400px]"
-              src="/assets/Cube.png"
+              src="/assets/landing/Cube.png"
               alt="Cube"
               style={{ minWidth: '160px', width: '70vw', maxWidth: '400px' }}
             />
@@ -301,7 +301,7 @@ function LandingPage() {
                     blendyRef.current?.untoggle('location', () => setShowLocation(false));
                   }}
                 >
-                  <img src="/assets/close_white.svg" className="w-5 h-5" />
+                  <img src="/assets/navbar/close_white.svg" className="w-5 h-5" />
                 </button>
               </div>
               <div className="rounded-lg overflow-hidden" style={{ filter: 'invert(90%) hue-rotate(180deg)' }}>
@@ -341,7 +341,7 @@ function LandingPage() {
                     blendyRef.current?.untoggle('calendar', () => setShowCalendar(false));
                   }}
                 >
-                  <img src="/assets/close_white.svg" className="w-5 h-5" />
+                  <img src="/assets/navbar/close_white.svg" className="w-5 h-5" />
                 </button>
               </div>
               <div className="bg-[#2a2a2a] rounded-lg p-4 border border-[#333333]">
