@@ -20,11 +20,11 @@ export default function MerchSection() {
         <img
           src="/assets/merch/isthatall.webp"
           alt="Is That All?"
-          className="w-64 sm:w-80 md:w-96 relative -left-4"
+          className="w-48 sm:w-80 md:w-96 mb-8 mt-32"
+          style={{ position: 'relative', top: '0' }}
         />
-
         <p
-          className="text-custom-white text-center text-lg sm:text-xl mt-4 mb-12 max-w-xl"
+          className="text-custom-white text-center text-xs sm:text-lg mt-2 mb-12 max-w-xs sm:max-w-xl"
           style={{ fontFamily: 'TacticSans' }}
         >
           Every one who gets selected gets Goodies! T-Shirts, stickers, you name it!
@@ -45,17 +45,17 @@ export default function MerchSection() {
       {/* --- FIX END --- */}
 
       <div className="relative z-10 w-full flex flex-col items-center -mt-60">
-        <div className="w-full max-w-xs mb-4 flex justify-center">
+        <div className="w-full max-w-xs mb-4 flex flex-col items-center justify-center">
           <div
             className="apply-button"
             data-hackathon-slug="code-recet-3"
             data-button-theme="dark-inverted"
             style={{ height: '44px', width: '312px' }}
           ></div>
+          <p className="text-custom-white text-center text-base sm:text-lg mt-2" style={{ fontFamily: 'TacticSans' }}>
+            If you haven’t already!
+          </p>
         </div>
-        <p className="text-custom-white text-center text-base sm:text-lg mt-2" style={{ fontFamily: 'TacticSans' }}>
-          If haven’t already!
-        </p>
       </div>
     </div>
   );
