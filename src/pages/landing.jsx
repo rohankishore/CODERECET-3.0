@@ -194,37 +194,39 @@ function LandingPage() {
             </div>
           </nav>
         </div>
+        
 
         <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] relative mt-8 lg:mt-12 w-full">
-          <h1 className="text-center w-full px-2 sm:px-0 mt-16 lg:mt-24">
-            <div className="font-thomeo text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" style={{ color: 'var(--color-white)', lineHeight: '1.1' }}>
-              CET<span className="font-satoshi_v">'</span>S
-            </div>
-            <div className="font-thomeo text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" style={{ color: 'var(--color-white)', lineHeight: '1.1' }}>
-              BIGGEST HACKATHON
-            </div>
-            <div className="font-hoops_brother text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl mt-2 sm:mt-4 relative z-10" style={{ color: 'var(--color-secondary)' }}>
-              IS BACK.
-            </div>
-          </h1>
-
-          <div className="relative flex items-center justify-center w-full" style={{ minHeight: '180px' }}>
-            <img
-              src="/assets/landing/Grid.webp"
-              alt="Grid"
-              className="absolute left-1/2 -translate-x-1/2 bottom-[-10px] sm:bottom-[-30px] w-[150vw] sm:w-[120vw] max-w-none pointer-events-none select-none z-10"
-              draggable="false"
-              style={{ minWidth: '320px', maxWidth: '1200px', opacity: 0.7 }}
-            />
-            <img
-              className="z-20 relative -mt-10 sm:-mt-20 lg:-mt-32 w-[70vw] max-w-[400px]"
-              src="/assets/landing/Cube.webp"
-              alt="Cube"
-              style={{ minWidth: '160px', width: '70vw', maxWidth: '400px' }}
-            />
+        <h1 className="text-center w-full px-2 sm:px-0 mt-8 md:mt-16 lg:mt-24">
+          <div className="font-thomeo text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" style={{ color: 'var(--color-white)', lineHeight: '1.1' }}>
+            CET<span className="font-satoshi_v">'</span>S
           </div>
+          <div className="font-thomeo text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" style={{ color: 'var(--color-white)', lineHeight: '1.1' }}>
+            BIGGEST HACKATHON
+          </div>
+          <div className="font-hoops_brother text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl mt-2 sm:mt-4 relative z-10" style={{ color: 'var(--color-secondary)' }}>
+            IS BACK.
+          </div>
+        </h1>
 
-          <div className="absolute bottom-8 sm:bottom-24 lg:bottom-28 w-full px-2 sm:px-4 lg:px-20 flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0 z-30">
+        <div className="relative flex items-center justify-center w-full" style={{ minHeight: '180px' }}>
+          <img
+            src="/assets/landing/Grid.png"
+            alt="Grid"
+            className="absolute left-1/2 -translate-x-1/2 bottom-[-10px] sm:bottom-[-30px] w-full sm:w-[120vw] max-w-none pointer-events-none select-none z-10"
+            draggable="false"
+            style={{ maxWidth: '1200px', opacity: 0.7 }}
+          />
+          <img
+            className="z-20 relative -mt-10 sm:-mt-20 lg:-mt-32 w-full max-w-[300px] sm:w-[70vw] sm:max-w-[400px]"
+            src="/assets/landing/Cube.gif"
+            alt="Cube"
+            style={{ minWidth: '120px', maxWidth: '400px' }}
+          />
+
+          {/* Button container placed on grid */}
+    
+          <div className="absolute left-0 right-0 mx-auto flex flex-row justify-between items-center px-4 sm:px-10 top-[60%] md:top-[70%] lg:top-[30%]">
             <div
               className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
               style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
@@ -237,13 +239,13 @@ function LandingPage() {
                   blendyRef.current?.toggle('calendar');
                 });
               }}
+              
             >
               <div>
                 <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-custom-white font-satoshi_v">13</div>
                 <div className="text-xs sm:text-sm lg:text-base text-custom-white font-satoshi_v">March</div>
               </div>
             </div>
-
             <div
               className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
               style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
@@ -256,13 +258,17 @@ function LandingPage() {
                   blendyRef.current?.toggle('location');
                 });
               }}
+              
             >
+
               <div>
                 <div className="text-lg sm:text-xl lg:text-2xl font-bold text-custom-white font-satoshi_v">CET</div>
                 <div className="text-xs sm:text-sm lg:text-sm text-custom-white font-satoshi_v">Join Us At</div>
               </div>
             </div>
           </div>
+        </div>
+
 
           <div className="lg:h-20 absolute bottom-0 w-full z-10 bg-custom-black inline-flex flex-nowrap border-2 border-l-0 border-r-0 border-custom-gray">
             <div className="overflow-hidden relative">
