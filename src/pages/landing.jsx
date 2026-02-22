@@ -211,7 +211,7 @@ function LandingPage() {
 
         <div className="relative flex items-center justify-center w-full" style={{ minHeight: '180px' }}>
           <img
-            src="/assets/landing/Grid.png"
+            src="/assets/landing/Grid.webp"
             alt="Grid"
             className="absolute left-1/2 -translate-x-1/2 bottom-[-10px] sm:bottom-[-30px] w-full sm:w-[120vw] max-w-none pointer-events-none select-none z-10"
             draggable="false"
