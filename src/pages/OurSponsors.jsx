@@ -27,7 +27,7 @@ function SponsorBox({ children, className = "", innerClassName = "" }) {
         className={`h-full w-full flex items-center justify-center ${innerClassName}`}
         style={{
           borderRadius: "15.6px",
-          backgroundColor: "#181818", 
+          backgroundColor: "#181818",
           backgroundImage:
             "linear-gradient(156.51deg, rgba(250, 250, 250, 0.25) -151.95%, rgba(8, 8, 8, 0.25) 55.32%, rgba(107, 107, 107, 0.25) 202.54%)",
         }}
@@ -78,7 +78,7 @@ function OurSponsors() {
                 innerClassName="px-8 md:px-12"
               >
                 <img
-                  src="/assets/logo/Armada.svg"
+                  src="/assets/sponsor/Armada.svg"
                   alt="Armada"
                   className="w-[78%] md:w-[62%] max-w-[768px] h-auto object-contain"
                   style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}

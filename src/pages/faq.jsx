@@ -41,7 +41,7 @@ export default function FAQSection() {
   return (
     <section className="bg-custom-black px-10 py-40 relative overflow-hidden">
       <img
-        src="/assets/tunnel.png"
+        src="/assets/faq/tunnel.png"
         alt="Tunnel Background"
         className="absolute inset-0 w-full h-full object-cover z-0 opacity-[0.18] pointer-events-none"
       />
