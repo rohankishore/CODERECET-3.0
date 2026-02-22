@@ -55,10 +55,10 @@ const Countdown = () => {
         <div className="flex justify-between md:justify-center items-center w-full md:gap-4 lg:gap-[30px] xl:gap-[40px]">
           {/* Days */}
           <div className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[180px] xl:w-[220px] flex flex-col items-center justify-center ">
-            <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-custom-white leading-none tabular-nums text-center w-full">
+            <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-[#fffffa] leading-none tabular-nums text-center w-full">
               {timeLeft.days}
             </div>
-            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 lg:mt-4 tracking-widest text-center">
+            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-[#fffffa] leading-none mt-2 lg:mt-4 tracking-widest text-center">
               DAYS
             </div>
           </div>
@@ -71,10 +71,10 @@ const Countdown = () => {
 
           {/* Hours */}
           <div className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[180px] xl:w-[220px] flex flex-col items-center justify-center">
-            <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-custom-white leading-none tabular-nums text-center w-full">
+            <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-[#fffffa] leading-none tabular-nums text-center w-full">
               {timeLeft.hours}
             </div>
-            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 lg:mt-4 tracking-widest text-center">
+            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-[#fffffa] leading-none mt-2 lg:mt-4 tracking-widest text-center">
               HOURS
             </div>
           </div>
@@ -87,10 +87,10 @@ const Countdown = () => {
 
           {/* Minutes */}
           <div className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[180px] xl:w-[220px] flex flex-col items-center justify-center">
-            <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-custom-white leading-none tabular-nums text-center w-full">
+            <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-[#fffffa] leading-none tabular-nums text-center w-full">
               {timeLeft.minutes}
             </div>
-            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 lg:mt-4 tracking-widest text-center">
+            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-[#fffffa] leading-none mt-2 lg:mt-4 tracking-widest text-center">
               MINUTES
             </div>
           </div>
@@ -103,10 +103,10 @@ const Countdown = () => {
 
           {/* Seconds */}
           <div className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[180px] xl:w-[220px] flex flex-col items-center justify-center">
-            <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-custom-white leading-none tabular-nums text-center w-full">
+            <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-[#fffffa] leading-none tabular-nums text-center w-full">
               {timeLeft.seconds}
             </div>
-            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 lg:mt-4 tracking-widest text-center">
+            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-[#fffffa] leading-none mt-2 lg:mt-4 tracking-widest text-center">
               SECONDS
             </div>
           </div>
