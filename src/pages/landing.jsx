@@ -89,8 +89,8 @@ function LandingPage() {
             <div className="cursor-pointer flex-shrink-0 relative">
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-green-400 opacity-30 blur-3xl rounded-full"></div>
               <img
-                src="/assets/logo/Logo copy.png"
-                className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 relative z-10"
+                src="/assets/logo/CodeRecetXArmada.svg"
+                className="w-auto h-12 sm:w-auto sm:h-16 lg:w-auto lg:h-56 relative z-10"
               />
             </div>
             

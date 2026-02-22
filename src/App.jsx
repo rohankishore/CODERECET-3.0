@@ -5,6 +5,7 @@ import LandingPage from "./pages/landing"
 import Countdown from "./pages/countdown"
 import AboutUs from "./pages/aboutus"
 import Perks from "./pages/perks"
+import Tagline from "./pages/tagline"
 import Prizes from "./pages/prizes"
 import Footer from "./pages/Footer"
 import OurSponsors from "./pages/OurSponsors"
@@ -55,6 +56,7 @@ function App() {
         <LandingPage />
         <AboutUs />
         <Countdown />
+        <Tagline />
         <Perks />
         <Prizes />
         <OurSponsors />
