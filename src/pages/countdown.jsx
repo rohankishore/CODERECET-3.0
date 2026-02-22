@@ -58,7 +58,7 @@ const Countdown = () => {
             <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-custom-white leading-none tabular-nums text-center w-full">
               {timeLeft.days}
             </div>
-            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2  tracking-widest text-center">
+            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 lg:mt-4 tracking-widest text-center">
               DAYS
             </div>
           </div>
@@ -74,7 +74,7 @@ const Countdown = () => {
             <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-custom-white leading-none tabular-nums text-center w-full">
               {timeLeft.hours}
             </div>
-            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 tracking-widest text-center">
+            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 lg:mt-4 tracking-widest text-center">
               HOURS
             </div>
           </div>
@@ -90,7 +90,7 @@ const Countdown = () => {
             <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-custom-white leading-none tabular-nums text-center w-full">
               {timeLeft.minutes}
             </div>
-            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 tracking-widest text-center">
+            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 lg:mt-4 tracking-widest text-center">
               MINUTES
             </div>
           </div>
@@ -106,7 +106,7 @@ const Countdown = () => {
             <div className="font-thomeo text-5xl sm:text-7xl md:text-8xl lg:text-[180px] xl:text-[200px] text-custom-white leading-none tabular-nums text-center w-full">
               {timeLeft.seconds}
             </div>
-            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 tracking-widest text-center">
+            <div className="font-tactic_sans text-[10px] sm:text-sm md:text-base lg:text-[24px] xl:text-[29px] text-custom-white leading-none mt-2 lg:mt-4 tracking-widest text-center">
               SECONDS
             </div>
           </div>
