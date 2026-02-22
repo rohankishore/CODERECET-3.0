@@ -52,14 +52,15 @@ function App() {
         animate={{ opacity: showIntro ? 0 : 1 }}
         transition={{ duration: 0.8, delay: showIntro ? 0 : 0.3 }}
       >
-        <LandingPage/>
-        <AboutUs/>
-        <Countdown/>
-        <Prizes/>
-        <OurSponsors/>
-        <MerchSection/>
-        <FAQSection/>
-        <Footer/>
+        <LandingPage />
+        <AboutUs />
+        <Countdown />
+        <Perks />
+        <Prizes />
+        <OurSponsors />
+        <MerchSection />
+        <FAQSection />
+        <Footer />
       </motion.div>
     </div>
   )
