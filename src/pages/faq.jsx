@@ -39,7 +39,7 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="bg-custom-black px-10 py-40 relative overflow-hidden">
+    <section className="bg-custom-black w-full px-2 md:px-10 py-40 relative overflow-visible">
       <img
         src="/assets/faq/tunnel.webp"
         alt="Tunnel Background"
@@ -47,10 +47,10 @@ export default function FAQSection() {
       />
 
       <div className="mb-20 relative z-10 flex flex-col items-start px-2 lg:px-12">
-        <h3 className="font-hoops_brother text-[47px] text-custom-secondary leading-none">
+        <h3 className="font-hoops_brother text-[5vw] md:text-[40px] text-custom-secondary leading-none" style={{wordBreak: 'break-word'}}>
           Frequently Asked
         </h3>
-        <h2 className="font-thomeo text-[76px] uppercase text-custom-white leading-none">
+        <h2 className="font-thomeo text-[8vw] md:text-[65px] uppercase text-custom-white leading-none" style={{wordBreak: 'break-word'}}>
           QUESTIONS
         </h2>
       </div>
