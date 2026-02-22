@@ -41,7 +41,7 @@ function LandingPage() {
           <nav className="flex justify-between items-center w-full max-w-[1340px] h-[64px] bg-black/10 backdrop-blur-md border border-white/10 rounded-full px-6 lg:px-10">
             {/* Left: Nav Menu */}
             <div className="flex-1 flex justify-start items-center">
-              <ul className="sm:flex hidden text-sm lg:text-base font-tactic_sans space-x-6 lg:space-x-10 text-[#fffffa] items-center tracking-wide">
+              <ul className="sm:flex hidden text-xs lg:text-sm font-tactic_sans space-x-6 lg:space-x-10 text-[#fffffa] items-center tracking-wide">
                 <li>
                   <Link
                     to="about"
