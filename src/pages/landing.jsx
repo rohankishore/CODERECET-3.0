@@ -38,10 +38,10 @@ function LandingPage() {
       <div className="min-h-screen bg-custom-black">
 
         <div className="flex justify-center w-full fixed top-0 sm:top-6 lg:top-8 z-50 px-4">
-          <nav className="flex justify-between items-center w-full max-w-[1340px] h-[64px] bg-black/60 backdrop-blur-md border border-white/10 rounded-full px-6 lg:px-10">
+          <nav className="flex justify-between items-center w-full max-w-[1340px] h-[64px] bg-black/10 backdrop-blur-md border border-white/10 rounded-full px-6 lg:px-10">
             {/* Left: Nav Menu */}
             <div className="flex-1 flex justify-start items-center">
-              <ul className="sm:flex hidden text-sm lg:text-base font-sans font-medium space-x-6 lg:space-x-10 text-[#fffffa] items-center tracking-wide">
+              <ul className="sm:flex hidden text-sm lg:text-base font-tactic_sans space-x-6 lg:space-x-10 text-[#fffffa] items-center tracking-wide">
                 <li>
                   <Link
                     to="about"
@@ -98,7 +98,7 @@ function LandingPage() {
             <div className="flex-1 flex justify-end items-center gap-4">
               <div className="hidden sm:block">
                 <div className="rounded-full px-6 py-2 cursor-pointer border border-white/20 hover:bg-white/10 transition-colors">
-                  <span className="font-sans font-medium text-[#fffffa] text-xs lg:text-sm tracking-wide">
+                  <span className="font-tactic_sans text-[#fffffa] text-xs lg:text-sm tracking-wide">
                     Register Now - It's Free
                   </span>
                 </div>
@@ -335,8 +335,8 @@ function LandingPage() {
                     <div
                       key={i}
                       className={`p-2 rounded-md ${i + 1 === 13
-                          ? 'bg-custom-secondary text-black font-bold'
-                          : 'hover:bg-[#3a3a3a]'
+                        ? 'bg-custom-secondary text-black font-bold'
+                        : 'hover:bg-[#3a3a3a]'
                         }`}
                     >
                       {i + 1}

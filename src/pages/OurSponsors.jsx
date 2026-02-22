@@ -47,7 +47,7 @@ function OurSponsors() {
       className="bg-custom-black w-full"
       aria-label="Our Sponsors"
     >
-      <div className="relative border-custom-gray border-y px-6 py-16 md:py-20">
+      <div className="relative  px-6 py-16 md:py-20 lg:border-custom-gray lg:border-y lg:-mt-40 lg:py-40">
         <div className="mx-auto max-w-[1240px]">
           <div className="max-w-[442px] leading-none">
             <p

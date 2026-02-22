@@ -5,7 +5,7 @@ import "../App.css";
 export default function MerchSection() {
   return (
     // Added min-h to ensure the section is tall enough to show the mask nicely
-    <div className="relative flex flex-col items-center justify-center w-full bg-custom-black py-16 px-4 overflow-visible min-h-[600px]">
+    <div className="relative flex flex-col items-center justify-center w-full bg-custom-black py-40 px-4 overflow-visible min-h-[600px]">
       <div className="relative z-10 flex flex-col items-center w-full">
         <img 
           src="/assets/isthatall.png" 
@@ -26,7 +26,7 @@ export default function MerchSection() {
         src="/assets/merch_mask.png" 
         alt="" 
         // Changed to fill the container and anchor to bottom
-        className="inset-0 w-full h-full object-cover object-bottom pointer-events-none"
+        className="inset-0 w-full h-full object-cover object-bottom pointer-events-none -mt-80"
         style={{ 
             mixBlendMode: 'screen',
             zIndex: 0 
@@ -34,7 +34,7 @@ export default function MerchSection() {
       />
       {/* --- FIX END --- */}
 
-      <div className="relative z-10 w-full flex flex-col items-center">
+      <div className="relative z-10 w-full flex flex-col items-center -mt-80">
         <div className="w-full max-w-xs mb-4">
           <FigmaRegisterButton />
         </div>
