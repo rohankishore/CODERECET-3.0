@@ -18,7 +18,7 @@ export default function MerchSection() {
     <div className="relative flex flex-col items-center justify-center w-full bg-custom-black py-40 px-4 overflow-visible min-h-[600px]">
       <div className="relative z-10 flex flex-col items-center w-full">
         <img
-          src="/assets/merch/isthatall.png"
+          src="/assets/merch/isthatall.webp"
           alt="Is That All?"
           className="w-64 sm:w-80 md:w-96 relative -left-4"
         />
@@ -33,7 +33,7 @@ export default function MerchSection() {
 
       {/* --- FIX START --- */}
       <img
-        src="/assets/merch/merch_mask.png"
+        src="/assets/merch/merch_mask.webp"
         alt=""
         // Changed to fill the container and anchor to bottom
         className="inset-0 w-full h-full object-cover object-bottom pointer-events-none -mt-80"

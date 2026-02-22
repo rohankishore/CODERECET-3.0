@@ -210,7 +210,7 @@ function LandingPage() {
 
           <div className="relative flex items-center justify-center w-full" style={{ minHeight: '180px' }}>
             <img
-              src="/assets/landing/Grid.png"
+              src="/assets/landing/Grid.webp"
               alt="Grid"
               className="absolute left-1/2 -translate-x-1/2 bottom-[-10px] sm:bottom-[-30px] w-[150vw] sm:w-[120vw] max-w-none pointer-events-none select-none z-10"
               draggable="false"
@@ -218,7 +218,7 @@ function LandingPage() {
             />
             <img
               className="z-20 relative -mt-10 sm:-mt-20 lg:-mt-32 w-[70vw] max-w-[400px]"
-              src="/assets/landing/Cube.png"
+              src="/assets/landing/Cube.webp"
               alt="Cube"
               style={{ minWidth: '160px', width: '70vw', maxWidth: '400px' }}
             />

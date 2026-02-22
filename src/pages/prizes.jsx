@@ -20,17 +20,17 @@ export default function Prizes() {
         {/* Prize Images */}
         <div className="flex flex-col lg:-mt-20">
           <img
-            src="/assets/prizes/First.png"
+            src="/assets/prizes/First.webp"
             alt="1st Prize"
             className="w-full h-auto mix-blend-exclusion -mt-16 sm:-mt-24 md:-mt-32"
           />
           <img
-            src="/assets/prizes/Second.png"
+            src="/assets/prizes/Second.webp"
             alt="2nd Prize"
             className="w-full h-auto mix-blend-exclusion -mt-16 sm:-mt-24 md:-mt-32"
           />
           <img
-            src="/assets/prizes/Third.png"
+            src="/assets/prizes/Third.webp"
             alt="3rd Prize"
             className="w-full h-auto mix-blend-exclusion -mt-16 sm:-mt-24 md:-mt-32"
           />

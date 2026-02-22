@@ -9,7 +9,7 @@ export default function Perks() {
       {/* Perks Image (Cards) */}
       <div className="flex flex-col mt-4 md:mt-8">
         <img
-          src="/assets/perks/Perks.png"
+          src="/assets/perks/Perks.webp"
           alt="Perks"
           className="w-full h-auto"
         />

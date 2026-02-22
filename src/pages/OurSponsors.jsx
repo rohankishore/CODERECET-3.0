@@ -113,7 +113,7 @@ function OurSponsors() {
 
               <SponsorBox className="h-[140px] sm:h-[160px] md:h-[178px]" innerClassName="p-4">
                 <img
-                  src="/assets/sponsor/buildClub.png"
+                  src="/assets/sponsor/buildClub.webp"
                   alt="BuildClub"
                   className="h-[68px] w-[68px] sm:h-[92px] sm:w-[92px] md:h-[122px] md:w-[122px] object-cover rounded-2xl"
                 />

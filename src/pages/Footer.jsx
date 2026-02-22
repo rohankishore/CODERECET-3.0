@@ -5,8 +5,8 @@ import facebookLogo from "/assets/footer/facebook-logo.svg";
 import discordLogo from "/assets/footer/discord-logo.svg";
 import linkedinLogo from "/assets/footer/linkedin-logo.svg";
 import githubLogo from "/assets/footer/github-logo.svg";
-import tinkerhubLogo from "/assets/footer/tinkerhub.png";
-import ietLogo from "/assets/footer/IET.png";
+import tinkerhubLogo from "/assets/footer/tinkerhub.webp";
+import ietLogo from "/assets/footer/IET.webp";
 
 function Footer() {
   return (
