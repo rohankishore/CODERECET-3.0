@@ -1,0 +1,37 @@
+.problem-section {
+  /* Responsive padding and background */
+  background: #f8fafc;
+}
+
+.problem-card {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal {
+  z-index: 1000;
+}
+
+.modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.problem-section h2 {
+  font-family: 'HoopsBrother', sans-serif;
+}
+
+@media (max-width: 640px) {
+  .problem-section {
+    padding: 1rem 0.5rem;
+  }
+  .problem-card {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .modal-content {
+    padding: 1rem;
+  }
+}

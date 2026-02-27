@@ -11,6 +11,7 @@ import Footer from "./pages/Footer"
 import OurSponsors from "./pages/OurSponsors"
 import MerchSection from "./pages/merch"
 import FAQSection from "./pages/faq"
+import ProblemStatement from "./components/ProblemStatement"
 
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
         <AboutUs />
         <Countdown />
         <Tagline />
+        <ProblemStatement />
         <Perks />
         <Prizes />
         <OurSponsors />
