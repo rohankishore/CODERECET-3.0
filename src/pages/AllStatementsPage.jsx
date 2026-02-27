@@ -134,15 +134,50 @@ function AllStatementsPage() {
         <span className="font-hoops_brother text-custom-secondary text-[36px] md:text-[47px] block">PROBLEM</span>
         <span className="font-thomeo text-white text-[56px] md:text-[76px] block -mt-2">STATEMENTS</span>
       </div>
-      <div className="w-full max-w-5xl rounded-2xl shadow-2xl overflow-hidden bg-[#222] p-8 flex flex-col items-center">
-        <iframe
-          ref={pdfRef}
-          src="/data/questions/questions.pdf#toolbar=0&navpanes=0&scrollbar=0"
-          title="Problem Statements PDF"
-          className="w-full h-[95vh] rounded-2xl border-4 border-yellow-300 bg-white"
-          style={{ boxShadow: "0 12px 48px rgba(230,248,90,0.18)", minHeight: "900px" }}
-          frameBorder="0"
-        />
+      <div className="w-full max-w-5xl rounded-2xl shadow-2xl overflow-hidden bg-[#222] p-4 md:p-8 flex flex-col items-center">
+        <div className="w-full flex justify-center items-center" style={{overflowX: 'hidden', background: '#222', padding: '0.5rem 0'}}>
+          <iframe
+            ref={pdfRef}
+            src="/data/questions/questions.pdf#toolbar=0&navpanes=0&scrollbar=0"
+            title="Problem Statements PDF"
+            className="rounded-2xl border-4 border-yellow-300 bg-white"
+            style={{
+              boxShadow: "0 12px 48px rgba(230,248,90,0.18)",
+              aspectRatio: '9/16',
+              width: '100%',
+              maxWidth: '420px',
+              height: '80vh',
+              minHeight: '60vh',
+              border: '4px solid #e6f85a',
+              background: '#fff',
+              display: 'block',
+              margin: '0 auto'
+            }}
+            frameBorder="0"
+            scrolling="no"
+          />
+        </div>
+        <style>{`
+          @media (max-width: 600px) {
+            .problem-section iframe {
+              aspect-ratio: 9/16 !important;
+              width: 98vw !important;
+              max-width: 98vw !important;
+              height: 90vh !important;
+              min-height: 70vh !important;
+              border-radius: 1.5rem !important;
+              border: 3px solid #e6f85a !important;
+              background: #fff !important;
+              box-shadow: 0 8px 32px rgba(230,248,90,0.15) !important;
+              overflow-x: hidden !important;
+            }
+            .problem-section {
+              overflow-x: hidden !important;
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+            }
+          }
+        `}</style>
       </div>
     </section>
   );
