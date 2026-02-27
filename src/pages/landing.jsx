@@ -254,16 +254,22 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                 </button>
               </div>
               <div className="rounded-lg overflow-hidden" style={{ filter: 'invert(90%) hue-rotate(180deg)' }}>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.27996839653!2d76.90028094100948!3d8.545851629468523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bec79541c519%3A0x98324eb5aafb3778!2sCollege%20of%20Engineering%20Trivandrum%20(CET)!5e1!3m2!1sen!2sin!4v1770842775967!5m2!1sen!2sin"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="map"
-                />
+                <div className="flex flex-col items-start gap-4 p-4">
+                  <div className="text-custom-white font-satoshi_v text-base">
+                    College of Engineering Trivandrum (CET)<br/>
+                    Engineering College, Sreekaryam - Kulathoor Rd,<br/>
+                    P.O, Sreekaryam, Thiruvananthapuram, Kerala 695016
+                  </div>
+                  <a
+                    href="https://www.google.com/maps?ll=8.545851,76.906341&z=14&t=h&hl=en&gl=IN&mapclient=embed&cid=10966914584765216632"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 rounded-lg font-bold text-black"
+                    style={{ backgroundColor: 'var(--color-secondary)' }}
+                  >
+                    Open in Google Maps
+                  </a>
+                </div>
               </div>
             </div>
           </div>
