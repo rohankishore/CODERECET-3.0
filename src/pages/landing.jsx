@@ -242,8 +242,8 @@ function LandingPage() {
               
             >
               <div>
-                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-custom-white font-satoshi_v">13</div>
-                <div className="text-xs sm:text-sm lg:text-base text-custom-white font-satoshi_v">March</div>
+                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-custom-white font-thomeo">13</div>
+                <div className="text-xs sm:text-sm lg:text-base text-custom-white font-tactic_sans">March</div>
               </div>
             </div>
             <div
@@ -262,8 +262,8 @@ function LandingPage() {
             >
 
               <div>
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-custom-white font-satoshi_v">CET</div>
-                <div className="text-xs sm:text-sm lg:text-sm text-custom-white font-satoshi_v">Join Us At</div>
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-custom-white font-thomeo">CET</div>
+                <div className="text-xs sm:text-sm lg:text-sm text-custom-white font-tactic_sans">Join Us At</div>
               </div>
             </div>
           </div>
