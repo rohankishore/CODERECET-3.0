@@ -126,40 +126,37 @@ function AllStatementsPage() {
   }, []);
 
   return (
-    <section className="problem-section px-0 md:px-6 py-12 md:py-20 bg-[#1a1a1a] min-h-screen flex flex-col items-center justify-center overflow-x-hidden" id="all-statements">
-      <div className="mb-12 leading-none text-center px-4">
+    <section className="problem-section w-full bg-[#1a1a1a] min-h-screen flex flex-col items-center pt-12 md:py-20 overflow-x-hidden" id="all-statements">
+      <div className="mb-8 leading-none text-center px-4 w-full">
         <span className="font-hoops_brother text-custom-secondary text-[36px] md:text-[47px] block">PROBLEM</span>
         <span className="font-thomeo text-white text-[56px] md:text-[76px] block -mt-2">STATEMENTS</span>
       </div>
-      <div className="w-full max-w-5xl rounded-none md:rounded-2xl shadow-2xl overflow-hidden bg-[#222] p-0 md:p-8 flex flex-col items-center">
+      
+      <div className="w-full max-w-6xl md:rounded-2xl bg-transparent md:bg-[#222] md:p-8 flex flex-col items-center">
         <div className="w-full overflow-hidden">
           <iframe
             ref={pdfRef}
-            src="/data/questions/questions.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+            src="/data/questions/questions.pdf#view=FitH&zoom=page-width&toolbar=0&navpanes=0&scrollbar=0"
             title="Problem Statements PDF"
-            className="w-full rounded-none md:rounded-2xl border-0 md:border-4 border-yellow-300 bg-white"
+            className="w-full border-0 md:rounded-2xl md:border-4 md:border-yellow-300 bg-white"
             style={{
-              boxShadow: "0 12px 48px rgba(230,248,90,0.18)",
-              minHeight: "60vh",
-              height: "80vh",
-              maxHeight: "90vh",
-              width: "100%",
-              maxWidth: "100%"
+              minHeight: "85vh",
+              height: "100%",
             }}
             frameBorder="0"
           />
         </div>
+        
         <style>{`
           @media (max-width: 768px) {
-            .problem-section iframe {
-              min-height: 85vh !important;
-              height: 85vh !important;
-              width: 100% !important;
-              max-width: 100% !important;
-            }
             .problem-section {
-              overflow-x: hidden !important;
-              width: 100% !important;
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+            }
+            .problem-section iframe {
+              width: 100vw !important;
+              min-height: 100vh !important;
+              height: 100vh !important;
             }
           }
         `}</style>
