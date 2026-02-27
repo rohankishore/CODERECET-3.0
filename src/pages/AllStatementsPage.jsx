@@ -119,32 +119,31 @@ function ProblemStatementCard({ title, summary }) {
   );
 }
 
+import { useEffect, useRef } from "react";
+
 function AllStatementsPage() {
-  const [openId, setOpenId] = useState(null);
+  const pdfRef = useRef(null);
+
+  useEffect(() => {
+    // Optionally, you can add logic to auto-scroll or focus
+  }, []);
 
   return (
-    <section className="problem-section px-6 py-12 md:py-20 bg-[#1a1a1a] min-h-screen" id="all-statements">
-      <div className="mb-12 leading-none">
+    <section className="problem-section px-6 py-12 md:py-20 bg-[#1a1a1a] min-h-screen flex flex-col items-center justify-center" id="all-statements">
+      <div className="mb-12 leading-none text-center">
         <span className="font-hoops_brother text-custom-secondary text-[36px] md:text-[47px] block">PROBLEM</span>
         <span className="font-thomeo text-white text-[56px] md:text-[76px] block -mt-2">STATEMENTS</span>
       </div>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-[1440px] mx-auto">
-        {statements.map((s) => (
-          <ProblemStatementCard key={s.id} title={s.title} summary={s.summary} />
-        ))}
+      <div className="w-full max-w-5xl rounded-2xl shadow-2xl overflow-hidden bg-[#222] p-8 flex flex-col items-center">
+        <iframe
+          ref={pdfRef}
+          src="/data/questions/questions.pdf#toolbar=0&navpanes=0&scrollbar=0"
+          title="Problem Statements PDF"
+          className="w-full h-[95vh] rounded-2xl border-4 border-yellow-300 bg-white"
+          style={{ boxShadow: "0 12px 48px rgba(230,248,90,0.18)", minHeight: "900px" }}
+          frameBorder="0"
+        />
       </div>
-      {openId && (
-        <div className="modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="modal-content bg-white rounded-lg p-8 max-w-md w-full relative">
-            <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl"
-              onClick={() => setOpenId(null)}
-            >&#10005;</button>
-            <h3 className="font-bold text-[22px] md:text-[26px] mb-4 text-custom-black">{statements.find(s => s.id === openId).title}</h3>
-            <p className="text-custom-secondary text-[16px] md:text-[18px]">{statements.find(s => s.id === openId).details}</p>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
