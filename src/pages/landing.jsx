@@ -244,15 +244,13 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-custom-white font-satoshi_v text-xl font-bold">Location</h2>
                 <button
-                  className="p-1"
+                  className="bg-black/70 hover:bg-black p-2 rounded-full transition-all duration-200"
                   onClick={() => { blendyRef.current?.untoggle('location', () => setShowLocation(false)); }}
+                  aria-label="Close location"
                 >
-                  <img
-                    src="/assets/navbar/close_white.svg"
-                    className="w-5 h-5"
-                    alt="Close"
-                    onError={e => { e.currentTarget.style.display = 'none'; }}
-                  />
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </button>
               </div>
               <div className="rounded-lg overflow-hidden" style={{ filter: 'invert(90%) hue-rotate(180deg)' }}>
