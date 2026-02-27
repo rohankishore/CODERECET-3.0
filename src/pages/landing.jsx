@@ -206,21 +206,30 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                     <div className="text-xs sm:text-sm lg:text-base text-custom-white font-tactic_sans">March</div>
                   </div>
                 </div>
-                <div
-                  className="w-[110px] sm:w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
-                  style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
-                  onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
-                  onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
-                  data-blendy-from="location"
-                  onClick={() => {
-                    setShowLocation(true);
-                    requestAnimationFrame(() => { blendyRef.current?.toggle('location'); });
-                  }}
-                >
-                  <div>
-                    <div className="text-lg sm:text-xl lg:text-2xl font-bold text-custom-white font-thomeo">CET</div>
-                    <div className="text-xs sm:text-sm lg:text-sm text-custom-white font-tactic_sans">Join Us At</div>
+                <div className="relative w-[110px] sm:w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px]">
+                  {/* Actual visible button */}
+                  <div
+                    className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
+                    style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
+                    onMouseEnter={e => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
+                    onMouseLeave={e => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
+                    data-blendy-from="location"
+                  >
+                    <div>
+                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-custom-white font-thomeo">CET</div>
+                      <div className="text-xs sm:text-sm lg:text-sm text-custom-white font-tactic_sans">Join Us At</div>
+                    </div>
                   </div>
+                  {/* Invisible clickable overlay above everything, including the cube */}
+                  <button
+                    aria-label="Open location modal"
+                    className="absolute inset-0 w-full h-full z-30 cursor-pointer"
+                    style={{ background: 'transparent', border: 'none', padding: 0, margin: 0, outline: 'none' }}
+                    onClick={() => {
+                      setShowLocation(true);
+                      requestAnimationFrame(() => { blendyRef.current?.toggle('location'); });
+                    }}
+                  />
                 </div>
               </div>
             </div>
