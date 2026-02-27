@@ -28,7 +28,12 @@ export default function FAQCard({ number, question, answer }) {
         {/* Back Side */}
         <div
           className="faq-flip-card-back [backface-visibility:hidden] [transform:rotateY(180deg)] absolute inset-0 flex items-center justify-center rounded-[44px] px-10 py-12 min-h-[217px] overflow-hidden cursor-pointer bg-[#121212]"
-          onClick={() => setIsFlipped(false)}
+          onClick={() => {
+            // Force reflow to ensure immediate transition
+            const card = document.activeElement;
+            if (card) card.offsetHeight;
+            setIsFlipped(false);
+          }}
         >
           <p className="font-tactic_sans text-base md:text-lg text-custom-white text-center w-full max-w-[360px] mx-auto select-none">
             {answer}
