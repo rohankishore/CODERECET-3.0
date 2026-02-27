@@ -73,13 +73,20 @@ function LandingPage() {
                 </ul>
               </div>
 
-              <div className="cursor-pointer flex-shrink-0 flex items-center justify-center relative h-full">
+              <button
+                className="cursor-pointer flex-shrink-0 flex items-center justify-center relative h-full bg-transparent border-0 p-0 focus:outline-none"
+                style={{ outline: 'none' }}
+                aria-label="Scroll to top"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                type="button"
+              >
                 <img
                   src="/assets/logo/CodeRecetXArmada.svg"
                   className="w-auto h-[24px] lg:h-[30px] relative z-10"
                   alt="CodeRecet X Armada"
+                  draggable="false"
                 />
-              </div>
+              </button>
 
               <div className="flex-1 flex justify-end items-center gap-4">
                 <div className="hidden sm:block">
