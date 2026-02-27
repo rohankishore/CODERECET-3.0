@@ -226,9 +226,9 @@ function LandingPage() {
 
           {/* Button container placed on grid */}
     
-          <div className="absolute left-0 right-0 mx-auto flex flex-row justify-between items-center px-4 sm:px-10 top-[60%] md:top-[70%] lg:top-[30%]">
+          <div className="absolute left-0 right-0 mx-auto flex flex-row justify-between items-center px-4 sm:px-10 top-[60%] md:top-[70%] lg:top-[30%] gap-4">
             <div
-              className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
+              className="flex-1 min-w-0 max-w-[180px] sm:max-w-[220px] md:max-w-[260px] border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
               style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
               onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
               onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
@@ -239,7 +239,6 @@ function LandingPage() {
                   blendyRef.current?.toggle('calendar');
                 });
               }}
-              
             >
               <div>
                 <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-custom-white font-thomeo">13</div>
@@ -247,7 +246,7 @@ function LandingPage() {
               </div>
             </div>
             <div
-              className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
+              className="flex-1 min-w-0 max-w-[180px] sm:max-w-[220px] md:max-w-[260px] border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
               style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
               onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
               onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
@@ -258,9 +257,7 @@ function LandingPage() {
                   blendyRef.current?.toggle('location');
                 });
               }}
-              
             >
-
               <div>
                 <div className="text-lg sm:text-xl lg:text-2xl font-bold text-custom-white font-thomeo">CET</div>
                 <div className="text-xs sm:text-sm lg:text-sm text-custom-white font-tactic_sans">Join Us At</div>
