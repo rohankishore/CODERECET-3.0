@@ -128,18 +128,6 @@ function ProblemStatement() {
           VIEW ALL STATEMENTS
         </button>
       </div>
-      {openId && (
-        <div className="modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="modal-content bg-white rounded-lg p-8 max-w-md w-full relative">
-            <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl"
-              onClick={() => setOpenId(null)}
-            >&#10005;</button>
-            <h3 className="font-bold text-[22px] md:text-[26px] mb-4 text-custom-black">{statements.find(s => s.id === openId).title}</h3>
-            <p className="text-custom-secondary text-[16px] md:text-[18px]">{statements.find(s => s.id === openId).details}</p>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
