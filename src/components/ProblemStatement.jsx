@@ -100,12 +100,12 @@ function ProblemStatement() {
   const navigate = useNavigate();
 
   // Show only first 6 statements (2 rows of 3)
-  const previewStatements = statements.slice(0, 6);
+  const previewStatements = statements.slice(0, 3);
 
   return (
     <section className="problem-section px-6 py-12 md:py-20 bg-[#f8fafc]" id="problem-statements">
       <div className="mb-12 leading-none">
-        <span className="font-hoops_brother text-custom-secondary text-[36px] md:text-[47px] block">OUR</span>
+        <span className="font-hoops_brother text-custom-secondary text-[36px] md:text-[47px] block">PROBLEM</span>
         <span className="font-thomeo text-white text-[56px] md:text-[76px] block -mt-2">STATEMENTS</span>
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-[1440px] mx-auto">
