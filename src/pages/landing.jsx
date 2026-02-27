@@ -3,10 +3,13 @@ import { createPortal } from "react-dom";
 import { Link } from "react-scroll";
 import { createBlendy } from "blendy";
 
+
 function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
   const [showCalendar, setShowCalendar] = useState(false);
+  const [locationClosing, setLocationClosing] = useState(false);
+  const [calendarClosing, setCalendarClosing] = useState(false);
   const blendyRef = useRef(null);
 
   useEffect(() => {
@@ -234,18 +237,32 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
       </div>
 
       {showLocation && createPortal(
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center animate-[fadeIn_0.3s_ease-out]">
+        <div className={`fixed inset-0 z-[9999] flex items-center justify-center animate-[fadeIn_0.3s_ease-out] ${locationClosing ? 'animate-[fadeOut_0.3s_ease-in]' : ''}`}>
           <div
-            className="absolute inset-0 bg-black/60 animate-[fadeIn_0.3s_ease-out]"
-            onClick={() => { blendyRef.current?.untoggle('location', () => setShowLocation(false)); }}
+            className={`absolute inset-0 bg-black/60 animate-[fadeIn_0.3s_ease-out] ${locationClosing ? 'animate-[fadeOut_0.3s_ease-in]' : ''}`}
+            onClick={() => {
+              setLocationClosing(true);
+              blendyRef.current?.untoggle('location');
+              setTimeout(() => {
+                setShowLocation(false);
+                setLocationClosing(false);
+              }, 300);
+            }}
           />
-          <div className="bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[500px] relative z-10" data-blendy-to="location">
+          <div className={`bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[500px] relative z-10 ${locationClosing ? 'animate-[fadeOut_0.3s_ease-in]' : ''}`} data-blendy-to="location">
             <div>
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-custom-white font-tactic_sans text-xl font-bold">Location</h2>
                 <button
                   className="bg-black/70 hover:bg-black p-2 rounded-full transition-all duration-200"
-                  onClick={() => { blendyRef.current?.untoggle('location', () => setShowLocation(false)); }}
+                  onClick={() => {
+                    setLocationClosing(true);
+                    blendyRef.current?.untoggle('location');
+                    setTimeout(() => {
+                      setShowLocation(false);
+                      setLocationClosing(false);
+                    }, 300);
+                  }}
                   aria-label="Close location"
                 >
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -278,18 +295,32 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
       )}
       
       {showCalendar && createPortal(
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center animate-[fadeIn_0.3s_ease-out]">
+        <div className={`fixed inset-0 z-[9999] flex items-center justify-center animate-[fadeIn_0.3s_ease-out] ${calendarClosing ? 'animate-[fadeOut_0.3s_ease-in]' : ''}`}>
           <div
-            className="absolute inset-0 bg-black/60 animate-[fadeIn_0.3s_ease-out]"
-            onClick={() => { blendyRef.current?.untoggle('calendar', () => setShowCalendar(false)); }}
+            className={`absolute inset-0 bg-black/60 animate-[fadeIn_0.3s_ease-out] ${calendarClosing ? 'animate-[fadeOut_0.3s_ease-in]' : ''}`}
+            onClick={() => {
+              setCalendarClosing(true);
+              blendyRef.current?.untoggle('calendar');
+              setTimeout(() => {
+                setShowCalendar(false);
+                setCalendarClosing(false);
+              }, 300);
+            }}
           />
-          <div className="bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[400px] relative z-10" data-blendy-to="calendar">
+          <div className={`bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[400px] relative z-10 ${calendarClosing ? 'animate-[fadeOut_0.3s_ease-in]' : ''}`} data-blendy-to="calendar">
             <div>
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-custom-white font-satoshi_v text-xl font-bold">Event Date</h2>
                 <button
                   className="bg-black/70 hover:bg-black p-2 rounded-full transition-all duration-200"
-                  onClick={() => { blendyRef.current?.untoggle('calendar', () => setShowCalendar(false)); }}
+                  onClick={() => {
+                    setCalendarClosing(true);
+                    blendyRef.current?.untoggle('calendar');
+                    setTimeout(() => {
+                      setShowCalendar(false);
+                      setCalendarClosing(false);
+                    }, 300);
+                  }}
                   aria-label="Close calendar"
                 >
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
