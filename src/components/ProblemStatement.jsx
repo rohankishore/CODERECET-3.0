@@ -100,7 +100,8 @@ function ProblemStatement() {
   return (
     <section className="problem-section px-6 py-12 md:py-20 bg-[#f8fafc]" id="problem-statements">
       <h2 className="font-brotherhoops text-[48px] md:text-[64px] text-left mb-12 uppercase">
-        <span className="text-custom-secondary">PROBLEM</span> <span className="text-white">STATEMENTS</span>
+        <span className="text-custom-secondary">PROBLEM</span><br />
+        <span className="font-thomeo text-white block text-[44px] md:text-[60px] mt-2">STATEMENTS</span>
       </h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-[1440px] mx-auto">
         {statements.map((s) => (
