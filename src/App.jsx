@@ -12,6 +12,10 @@ import OurSponsors from "./pages/OurSponsors"
 import MerchSection from "./pages/merch"
 import FAQSection from "./pages/faq"
 import ProblemStatement from "./components/ProblemStatement"
+import AllStatementsPage from "./pages/AllStatementsPage"
+// Add route for all statements page
+// If using react-router-dom v6+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 
 function App() {
@@ -37,36 +41,45 @@ function App() {
   }, [showIntro])
 
   return (
-    <div className="flex flex-col bg-custom-black">
-      <AnimatePresence>
-        {showIntro && (
-          <motion.div
-            exit={{ opacity: 0, y: -100 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-          >
-            <IntroPage onScrollDown={handleScrollDown} />
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <Router>
+      <div className="flex flex-col bg-custom-black">
+        <AnimatePresence>
+          {showIntro && (
+            <motion.div
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            >
+              <IntroPage onScrollDown={handleScrollDown} />
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: showIntro ? 0 : 1 }}
-        transition={{ duration: 0.8, delay: showIntro ? 0 : 0.3 }}
-      >
-        <LandingPage />
-        <AboutUs />
-        <Countdown />
-        <Tagline />
-        <ProblemStatement />
-        <Perks />
-        <Prizes />
-        <OurSponsors />
-        <MerchSection />
-        <FAQSection />
-        <Footer />
-      </motion.div>
-    </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: showIntro ? 0 : 1 }}
+          transition={{ duration: 0.8, delay: showIntro ? 0 : 0.3 }}
+        >
+          <Routes>
+            <Route path="/" element={
+              <>
+                <LandingPage />
+                <AboutUs />
+                <Countdown />
+                <Tagline />
+                <Perks />
+                <ProblemStatement />
+                <Prizes />
+                <OurSponsors />
+                <MerchSection />
+                <FAQSection />
+                <Footer />
+              </>
+            } />
+            <Route path="/all-statements" element={<AllStatementsPage />} />
+          </Routes>
+        </motion.div>
+      </div>
+    </Router>
   )
 }
 

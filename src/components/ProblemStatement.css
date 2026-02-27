@@ -23,6 +23,20 @@
   font-family: 'HoopsBrother', sans-serif;
 }
 
+.glassy-card {
+  background: linear-gradient(135deg, #232323 0%, #1a1a1a 100%);
+  border: 1px solid #d6e94a;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+  backdrop-filter: blur(8px);
+}
+
+.glassy-btn {
+  background: linear-gradient(135deg, #232323 0%, #1a1a1a 100%);
+  border: 1px solid #d6e94a;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+  backdrop-filter: blur(8px);
+}
+
 @media (max-width: 640px) {
   .problem-section {
     padding: 1rem 0.5rem;

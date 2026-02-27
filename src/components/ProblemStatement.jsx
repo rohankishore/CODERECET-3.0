@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ProblemStatement.css';
+import { useNavigate } from 'react-router-dom';
 
 const statements = [
   {
@@ -96,24 +97,36 @@ const statements = [
 
 function ProblemStatement() {
   const [openId, setOpenId] = useState(null);
+  const navigate = useNavigate();
+
+  // Show only first 6 statements (2 rows of 3)
+  const previewStatements = statements.slice(0, 6);
 
   return (
     <section className="problem-section px-6 py-12 md:py-20 bg-[#f8fafc]" id="problem-statements">
       <div className="mb-12 leading-none">
-        <span className="font-brotherhoops text-custom-secondary text-[36px] md:text-[47px] block">OUR</span>
+        <span className="font-hoops_brother text-custom-secondary text-[36px] md:text-[47px] block">OUR</span>
         <span className="font-thomeo text-white text-[56px] md:text-[76px] block -mt-2">STATEMENTS</span>
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-[1440px] mx-auto">
-        {statements.map((s) => (
+        {previewStatements.map((s) => (
           <div
             key={s.id}
-            className="problem-card bg-white rounded-xl shadow-lg p-8 md:p-10 cursor-pointer hover:scale-105 transition-transform min-h-[120px] flex flex-col justify-center"
+            className="problem-card glassy-card bg-gradient-to-br from-[#232323] to-[#1a1a1a] border border-custom-secondary rounded-xl shadow-lg p-8 md:p-10 cursor-pointer hover:scale-105 transition-transform min-h-[120px] flex flex-col justify-center"
             onClick={() => setOpenId(s.id)}
           >
-            <h3 className="font-bold text-[22px] md:text-[26px] mb-2 text-custom-black">{s.title}</h3>
+            <h3 className="font-bold text-[22px] md:text-[26px] mb-2 text-white">{s.title}</h3>
             <p className="text-custom-secondary text-[16px] md:text-[18px]">{s.summary}</p>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center mt-8">
+        <button
+          className="glassy-btn px-8 py-3 rounded-full text-white font-bold text-lg bg-gradient-to-br from-[#232323] to-[#1a1a1a] border border-custom-secondary backdrop-blur-md shadow-lg hover:scale-105 transition-transform"
+          onClick={() => navigate('/all-statements')}
+        >
+          VIEW ALL STATEMENTS
+        </button>
       </div>
       {openId && (
         <div className="modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
