@@ -357,13 +357,25 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                 </div>
               </div>
               <a
-                href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20260313T110000Z%2F20260315T013000Z&details=Code%20ReCET%203.0%20is%20a%2036-hour%20hackathon%20that%20blends%20innovation%2C%20creativity%20and%20pure%20coding%20bliss%21%20Conducted%20collaboratively%20by%20TinkerHub%20CET%20and%20IET%20on%20campus%20CET%2C%20this%20hackathon%20is%20set%20to%20ignite%20the%20tech%20spirit%20at%20College%20of%20Engineering%2C%20Trivandrum.&location=College%20of%20Engineering%20Trivandrum%2C%20Sreekaryam%20-%20Kulathoor%20Road%2C%20Ambady%20Nagar%2C%20Chavadimukku%2C%20Engineering%20College%20P.O.%2C%20Thiruvananthapuram%2C%20Kerala%20-%20695016&text=Code%20reCET%203%2C0"
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20260313T110000Z%2F20260315T013000Z&details=Code%20ReCET%203.0%20is%20a%2036-hour%20hackathon%20that%20blends%20innovation%2C%20creativity%20and%20pure%20coding%20bliss%21%20Conducted%20collaboratively%20by%20TinkerHub%20CET%20and%20IET%20on%20campus%20CET%2C%20this%20hackathon%20is%20set%20to%20ignite%20the%20tech%20spirit%20at%20College%20of%20Engineering%2C%20Trivandrum.&location=College%20of%20Engineering%20Trivandrum%2C%20Sreekaryam%20-%20Kulathoor%20Road%2C%20Ambady%20Nagar%2C%20Chavadimukku%2C%20Engineering%20College%20P.O.%2C%20Thiruvananthapuram%2C%20Kerala%20-%20695016&text=Code%20reCET%203.0"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Add to Google Calendar"
                 className="w-full flex justify-center mt-4"
+                style={{ textDecoration: 'none' }}
               >
-                <img src="https://img.shields.io/badge/Add%20to%20Google%20Calendar-4285F4?style=for-the-badge&logoColor=white" alt="Google Calendar" />
+                <span
+                  className="flex items-center gap-2 px-6 py-3 rounded-lg font-satoshi_v font-bold text-white bg-[#4285F4] hover:bg-[#357ae8] transition-colors duration-200 shadow-md"
+                  style={{ minWidth: 0, justifyContent: 'center' }}
+                >
+                  <img
+                    src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_24_2x.png"
+                    alt="Google Calendar Logo"
+                    className="w-6 h-6 mr-2"
+                    style={{ background: 'white', borderRadius: '4px', padding: '2px' }}
+                  />
+                  Add to Google Calendar
+                </span>
               </a>
             </div>
           </div>
