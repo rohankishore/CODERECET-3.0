@@ -253,7 +253,7 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                   </svg>
                 </button>
               </div>
-              <div className="rounded-lg overflow-hidden" style={{ filter: 'invert(90%) hue-rotate(180deg)' }}>
+              <div className="rounded-lg overflow-hidden">
                 <div className="flex flex-col items-start gap-4 p-4">
                   <div className="font-tactic_sans text-base" style={{ color: '#ffffff' }}>
                     College of Engineering Trivandrum (CET)<br/>
