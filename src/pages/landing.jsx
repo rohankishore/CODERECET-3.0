@@ -80,11 +80,11 @@ function LandingPage() {
 
               <div className="flex-1 flex justify-end items-center gap-4">
                 <div className="hidden sm:block">
-                  <div className="rounded-full px-6 py-2 cursor-pointer border border-white/20 hover:bg-white/10 transition-colors">
+                  <a href="https://code-recet-3.devfolio.co/application" target="_blank" rel="noopener noreferrer" className="rounded-full px-6 py-2 cursor-pointer border border-white/20 hover:bg-white/10 transition-colors inline-block">
                     <span className="font-tactic_sans text-[#fffffa] text-xs lg:text-sm tracking-wide">
                       Register Now - It's Free
                     </span>
-                  </div>
+                  </a>
                 </div>
                 <button
                   onClick={() => setIsOpen(!isOpen)}
@@ -138,11 +138,11 @@ function LandingPage() {
                       </Link>
                     </li>
                     <li className="text-left mt-8 pt-4">
-                      <div className="rounded-full px-4 py-2 cursor-pointer inline-block" style={{ border: '1px solid rgba(230, 248, 90, 0.3)' }}>
+                      <a href="https://code-recet-3.devfolio.co/application" target="_blank" rel="noopener noreferrer" className="rounded-full px-4 py-2 cursor-pointer inline-block" style={{ border: '1px solid rgba(230, 248, 90, 0.3)' }}>
                         <span className="font-tactic_sans text-custom-white text-base">
                           Register Now - It's Free
                         </span>
-                      </div>
+                      </a>
                     </li>
                   </ul>
                 </div>
