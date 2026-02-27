@@ -3,6 +3,8 @@
   background: #1a1a1a;
   padding-left: 0;
   padding-right: 0;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 .problem-card {
@@ -46,10 +48,11 @@
   .problem-section {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100vw;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100vw !important;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
   .problem-card {
     padding: 1rem;
@@ -57,5 +60,7 @@
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
