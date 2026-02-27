@@ -238,22 +238,36 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
 
       {showLocation && createPortal(
         <div
-          className={`fixed inset-0 z-[9999] flex items-center justify-center ${locationClosing ? 'animate-[fadeOut_0.5s_ease-in-forwards]' : 'animate-[fadeIn_0.4s_ease-out]'}`}
+          className="fixed inset-0 z-[9999] flex items-center justify-center"
+          style={{
+            transition: 'opacity 0.45s cubic-bezier(0.4,0,0.2,1)',
+            opacity: locationClosing ? 0 : 1,
+            pointerEvents: locationClosing ? 'none' : 'auto',
+          }}
         >
           <div
-            className={`absolute inset-0 bg-black/60 ${locationClosing ? 'animate-[fadeOut_0.5s_ease-in-forwards]' : 'animate-[fadeIn_0.4s_ease-out]'}`}
+            className="absolute inset-0 bg-black/60"
+            style={{
+              transition: 'opacity 0.45s cubic-bezier(0.4,0,0.2,1)',
+              opacity: locationClosing ? 0 : 1,
+            }}
             onClick={() => {
               setLocationClosing(true);
               blendyRef.current?.untoggle('location');
               setTimeout(() => {
                 setShowLocation(false);
                 setLocationClosing(false);
-              }, 500);
+              }, 450);
             }}
           />
           <div
-            className={`bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[500px] relative z-10 ${locationClosing ? 'animate-[fadeOut_0.5s_ease-in-forwards]' : 'animate-[fadeIn_0.4s_ease-out]'}`}
+            className="bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[500px] relative z-10"
             data-blendy-to="location"
+            style={{
+              transition: 'opacity 0.45s cubic-bezier(0.4,0,0.2,1), transform 0.45s cubic-bezier(0.4,0,0.2,1)',
+              opacity: locationClosing ? 0 : 1,
+              transform: locationClosing ? 'scale(0.96)' : 'scale(1)',
+            }}
           >
             <div>
               <div className="flex justify-between items-center mb-4">
@@ -266,7 +280,7 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                     setTimeout(() => {
                       setShowLocation(false);
                       setLocationClosing(false);
-                    }, 500);
+                    }, 450);
                   }}
                   aria-label="Close location"
                 >
@@ -301,22 +315,36 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
       
       {showCalendar && createPortal(
         <div
-          className={`fixed inset-0 z-[9999] flex items-center justify-center ${calendarClosing ? 'animate-[fadeOut_0.5s_ease-in-forwards]' : 'animate-[fadeIn_0.4s_ease-out]'}`}
+          className="fixed inset-0 z-[9999] flex items-center justify-center"
+          style={{
+            transition: 'opacity 0.45s cubic-bezier(0.4,0,0.2,1)',
+            opacity: calendarClosing ? 0 : 1,
+            pointerEvents: calendarClosing ? 'none' : 'auto',
+          }}
         >
           <div
-            className={`absolute inset-0 bg-black/60 ${calendarClosing ? 'animate-[fadeOut_0.5s_ease-in-forwards]' : 'animate-[fadeIn_0.4s_ease-out]'}`}
+            className="absolute inset-0 bg-black/60"
+            style={{
+              transition: 'opacity 0.45s cubic-bezier(0.4,0,0.2,1)',
+              opacity: calendarClosing ? 0 : 1,
+            }}
             onClick={() => {
               setCalendarClosing(true);
               blendyRef.current?.untoggle('calendar');
               setTimeout(() => {
                 setShowCalendar(false);
                 setCalendarClosing(false);
-              }, 500);
+              }, 450);
             }}
           />
           <div
-            className={`bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[400px] relative z-10 ${calendarClosing ? 'animate-[fadeOut_0.5s_ease-in-forwards]' : 'animate-[fadeIn_0.4s_ease-out]'}`}
+            className="bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[400px] relative z-10"
             data-blendy-to="calendar"
+            style={{
+              transition: 'opacity 0.45s cubic-bezier(0.4,0,0.2,1), transform 0.45s cubic-bezier(0.4,0,0.2,1)',
+              opacity: calendarClosing ? 0 : 1,
+              transform: calendarClosing ? 'scale(0.96)' : 'scale(1)',
+            }}
           >
             <div>
               <div className="flex justify-between items-center mb-4">
@@ -329,7 +357,7 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                     setTimeout(() => {
                       setShowCalendar(false);
                       setCalendarClosing(false);
-                    }, 500);
+                    }, 450);
                   }}
                   aria-label="Close calendar"
                 >
