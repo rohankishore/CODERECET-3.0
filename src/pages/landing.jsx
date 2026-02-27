@@ -286,24 +286,16 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                     href="https://www.google.com/maps?ll=8.545851,76.906341&z=14&t=h&hl=en&gl=IN&mapclient=embed&cid=10966914584765216632"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-8 py-2 rounded-full border border-custom-secondary font-tactic_sans text-custom-secondary text-lg hover:bg-custom-secondary/10 transition-colors duration-200 shadow-md"
-                    style={{ minHeight: '40px', lineHeight: '1.2', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}
+                    className="inline-block px-4 sm:px-6 py-2 rounded-full border border-custom-secondary font-tactic_sans text-custom-secondary text-base sm:text-lg hover:bg-custom-secondary/10 transition-colors duration-200 shadow-md"
+                    style={{ minHeight: '40px', lineHeight: '1.2', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', maxWidth: '100%', overflow: 'hidden' }}
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      className="w-6 h-6 mr-2"
-                      style={{ background: 'white', borderRadius: '4px', padding: '2px' }}
-                    >
-                      <g>
-                        <circle cx="12" cy="12" r="12" fill="#34A853"/>
-                        <path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10c0-5.52-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8 0-4.41 3.59-8 8-8s8 3.59 8 8c0 4.41-3.59 8-8 8z" fill="#fff"/>
-                        <path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2A3.2 3.2 0 1112 8.8a3.2 3.2 0 010 6.4z" fill="#EA4335"/>
-                        <circle cx="12" cy="12" r="2" fill="#4285F4"/>
-                      </g>
-                    </svg>
-                    Open in Google Maps
+                    <img
+                      src="/assets/landing/gmaps.png"
+                      alt="Google Maps Logo"
+                      className="w-5 h-5 sm:w-6 sm:h-6 mr-2 flex-shrink-0"
+                      style={{ borderRadius: '4px', background: 'white', padding: '2px', display: 'block' }}
+                    />
+                    <span className="truncate">Open in Google Maps</span>
                   </a>
                 </div>
               </div>
