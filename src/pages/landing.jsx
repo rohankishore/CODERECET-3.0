@@ -242,7 +242,7 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
           <div className="bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[500px] relative z-10" data-blendy-to="location">
             <div>
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-custom-white font-satoshi_v text-xl font-bold">Location</h2>
+                <h2 className="text-custom-white font-tactic_sans text-xl font-bold">Location</h2>
                 <button
                   className="bg-black/70 hover:bg-black p-2 rounded-full transition-all duration-200"
                   onClick={() => { blendyRef.current?.untoggle('location', () => setShowLocation(false)); }}
@@ -264,7 +264,7 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                     href="https://www.google.com/maps?ll=8.545851,76.906341&z=14&t=h&hl=en&gl=IN&mapclient=embed&cid=10966914584765216632"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-8 py-2 rounded-full border border-custom-secondary font-thomeo text-custom-secondary text-lg hover:bg-custom-secondary/10 transition-colors duration-200 shadow-md"
+                    className="inline-block px-8 py-2 rounded-full border border-custom-secondary font-tactic_sans text-custom-secondary text-lg hover:bg-custom-secondary/10 transition-colors duration-200 shadow-md"
                     style={{ minHeight: '40px', lineHeight: '1.2', fontWeight: 700 }}
                   >
                     Open in Google Maps
