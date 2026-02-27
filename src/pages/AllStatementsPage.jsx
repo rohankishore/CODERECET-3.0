@@ -94,6 +94,31 @@ const statements = [
   },
 ];
 
+function ProblemStatementCard({ title, summary }) {
+  return (
+    <div className="w-full mb-6" style={{
+      padding: "1.04px",
+      borderRadius: "16.63px",
+      background: `linear-gradient(155.8deg, rgba(163,163,163,0.5) 0%, rgba(230,248,90,0.5) 10%, rgba(255,255,255,0.375) 45%, rgba(163,163,163,0.5) 75%, rgba(230,248,90,0.5) 100%)`,
+      backgroundClip: "padding-box",
+      WebkitBackgroundClip: "padding-box",
+    }}>
+      <div
+        className="h-full w-full flex flex-col justify-center p-4 md:p-6"
+        style={{
+          borderRadius: "15.6px",
+          backgroundColor: "#181818",
+          backgroundImage:
+            "linear-gradient(156.51deg, rgba(250, 250, 250, 0.25) -151.95%, rgba(8, 8, 8, 0.25) 55.32%, rgba(107, 107, 107, 0.25) 202.54%)",
+        }}
+      >
+        <h3 className="font-bold text-[22px] md:text-[26px] mb-2 text-white">{title}</h3>
+        <p className="text-custom-secondary text-[16px] md:text-[18px]">{summary}</p>
+      </div>
+    </div>
+  );
+}
+
 function AllStatementsPage() {
   const [openId, setOpenId] = useState(null);
 
@@ -105,14 +130,7 @@ function AllStatementsPage() {
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-[1440px] mx-auto">
         {statements.map((s) => (
-          <div
-            key={s.id}
-            className="problem-card glassy-card bg-gradient-to-br from-[#232323] to-[#1a1a1a] border border-custom-secondary rounded-xl shadow-lg p-8 md:p-10 cursor-pointer hover:scale-105 transition-transform min-h-[120px] flex flex-col justify-center"
-            onClick={() => setOpenId(s.id)}
-          >
-            <h3 className="font-bold text-[22px] md:text-[26px] mb-2 text-white">{s.title}</h3>
-            <p className="text-custom-secondary text-[16px] md:text-[18px]">{s.summary}</p>
-          </div>
+          <ProblemStatementCard key={s.id} title={s.title} summary={s.summary} />
         ))}
       </div>
       {openId && (
