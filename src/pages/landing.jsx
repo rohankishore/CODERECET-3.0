@@ -255,7 +255,7 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
               </div>
               <div className="rounded-lg overflow-hidden" style={{ filter: 'invert(90%) hue-rotate(180deg)' }}>
                 <div className="flex flex-col items-start gap-4 p-4">
-                  <div className="text-custom-white font-satoshi_v text-base">
+                  <div className="text-custom-secondary font-tactic_sans text-base">
                     College of Engineering Trivandrum (CET)<br/>
                     Engineering College, Sreekaryam - Kulathoor Rd,<br/>
                     P.O, Sreekaryam, Thiruvananthapuram, Kerala 695016
@@ -264,8 +264,8 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                     href="https://www.google.com/maps?ll=8.545851,76.906341&z=14&t=h&hl=en&gl=IN&mapclient=embed&cid=10966914584765216632"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-4 py-2 rounded-lg font-bold text-black"
-                    style={{ backgroundColor: 'var(--color-secondary)' }}
+                    className="inline-block px-8 py-2 rounded-full border border-custom-secondary font-thomeo text-custom-secondary text-lg hover:bg-custom-secondary/10 transition-colors duration-200 shadow-md"
+                    style={{ minHeight: '40px', lineHeight: '1.2', fontWeight: 700 }}
                   >
                     Open in Google Maps
                   </a>
