@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './ProblemStatement.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -97,15 +97,16 @@ const statements = [
 
 function ProblemStatementCard({ title, summary }) {
   return (
-    <div className="w-full mb-6" style={{
+    <div style={{
       padding: "1.04px",
       borderRadius: "16.63px",
       background: `linear-gradient(155.8deg, rgba(163,163,163,0.5) 0%, rgba(230,248,90,0.5) 10%, rgba(255,255,255,0.375) 45%, rgba(163,163,163,0.5) 75%, rgba(230,248,90,0.5) 100%)`,
       backgroundClip: "padding-box",
       WebkitBackgroundClip: "padding-box",
+      height: "100%",
     }}>
       <div
-        className="h-full w-full flex flex-col justify-center p-4 md:p-6"
+        className="h-full w-full flex flex-col justify-start p-4 md:p-6"
         style={{
           borderRadius: "15.6px",
           backgroundColor: "#181818",
@@ -113,8 +114,8 @@ function ProblemStatementCard({ title, summary }) {
             "linear-gradient(156.51deg, rgba(250, 250, 250, 0.25) -151.95%, rgba(8, 8, 8, 0.25) 55.32%, rgba(107, 107, 107, 0.25) 202.54%)",
         }}
       >
-        <h3 className="font-bold text-[22px] md:text-[26px] mb-2 text-white">{title}</h3>
-        <p className="text-custom-secondary text-[16px] md:text-[18px]">{summary}</p>
+        <h3 className="font-bold font-tactic_sans text-[18px] md:text-[20px] mb-2 text-white">{title}</h3>
+        <p className="font-tactic_sans text-custom-secondary text-[14px] md:text-[16px]">{summary}</p>
       </div>
     </div>
   );
@@ -123,9 +124,43 @@ function ProblemStatementCard({ title, summary }) {
 function ProblemStatement() {
   const [openId, setOpenId] = useState(null);
   const navigate = useNavigate();
+  const scrollContainerRef = useRef(null);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(true);
 
-  // Show only first 6 statements (2 rows of 3)
-  const previewStatements = statements.slice(0, 3);
+  const checkScroll = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      setShowLeftArrow(container.scrollLeft > 0);
+      setShowRightArrow(
+        container.scrollLeft < container.scrollWidth - container.clientWidth - 10
+      );
+    }
+  };
+
+  useEffect(() => {
+    checkScroll();
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', checkScroll);
+      window.addEventListener('resize', checkScroll);
+      return () => {
+        container.removeEventListener('scroll', checkScroll);
+        window.removeEventListener('resize', checkScroll);
+      };
+    }
+  }, []);
+
+  const scroll = (direction) => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const scrollAmount = 400;
+      container.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
     <section className="problem-section px-6 py-12 md:py-20 bg-[#f8fafc]" id="problem-statements">
@@ -133,17 +168,64 @@ function ProblemStatement() {
         <span className="font-hoops_brother text-custom-secondary text-[36px] md:text-[47px] block">PROBLEM</span>
         <span className="font-thomeo text-white text-[56px] md:text-[76px] block -mt-2">STATEMENTS</span>
       </div>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-[1440px] mx-auto">
-        {previewStatements.map((s) => (
-          <ProblemStatementCard key={s.id} title={s.title} summary={s.summary} />
-        ))}
+      
+      <div className="relative max-w-[1440px] mx-auto">
+        {/* Left Arrow */}
+        {showLeftArrow && (
+          <button
+            onClick={() => scroll('left')}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black p-3 rounded-full transition-all duration-200 h-12 w-12 flex items-center justify-center"
+            aria-label="Scroll left"
+          >
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+        )}
+
+        {/* Scroll Container */}
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-6 overflow-x-auto scroll-smooth pb-4"
+          style={{ scrollBehavior: 'smooth', scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          onWheel={(e) => {
+            const container = scrollContainerRef.current;
+            if (container) {
+              e.preventDefault();
+              container.scrollBy({
+                left: e.deltaY > 0 ? 100 : -100,
+                behavior: 'smooth',
+              });
+            }
+          }}
+        >
+          {statements.map((s) => (
+            <div key={s.id} className="flex-shrink-0 w-96">
+              <ProblemStatementCard title={s.title} summary={s.summary} />
+            </div>
+          ))}
+        </div>
+
+        {/* Right Arrow */}
+        {showRightArrow && (
+          <button
+            onClick={() => scroll('right')}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black p-3 rounded-full transition-all duration-200 h-12 w-12 flex items-center justify-center"
+            aria-label="Scroll right"
+          >
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        )}
       </div>
-      <div className="flex justify-center mt-8">
+
+      <div className="flex justify-center mt-12">
         <button
-          className="glassy-btn px-8 py-3 rounded-full text-white font-bold text-lg bg-gradient-to-br from-[#232323] to-[#1a1a1a] border border-custom-secondary backdrop-blur-md shadow-lg hover:scale-105 transition-transform"
+          className="glassy-btn px-8 py-3 rounded-full text-white font-bold font-tactic_sans text-lg bg-gradient-to-br from-[#232323] to-[#1a1a1a] border border-custom-secondary backdrop-blur-md shadow-lg hover:scale-105 transition-transform"
           onClick={() => navigate('/all-statements')}
         >
-          VIEW ALL STATEMENTS
+          VIEW STATEMENTS IN DETAIL
         </button>
       </div>
     </section>

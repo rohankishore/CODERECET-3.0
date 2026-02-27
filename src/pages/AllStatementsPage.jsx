@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../components/ProblemStatement.css';
 
 const statements = [
@@ -112,8 +113,8 @@ function ProblemStatementCard({ title, summary }) {
             "linear-gradient(156.51deg, rgba(250, 250, 250, 0.25) -151.95%, rgba(8, 8, 8, 0.25) 55.32%, rgba(107, 107, 107, 0.25) 202.54%)",
         }}
       >
-        <h3 className="font-bold text-[22px] md:text-[26px] mb-2 text-white">{title}</h3>
-        <p className="text-custom-secondary text-[16px] md:text-[18px]">{summary}</p>
+        <h3 className="font-bold font-tactic_sans text-[22px] md:text-[26px] mb-2 text-white">{title}</h3>
+        <p className="font-tactic_sans text-custom-secondary text-[16px] md:text-[18px]">{summary}</p>
       </div>
     </div>
   );
@@ -121,18 +122,30 @@ function ProblemStatementCard({ title, summary }) {
 
 function AllStatementsPage() {
   const pdfRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
   }, []);
 
   return (
-    <section className="problem-section w-full bg-[#1a1a1a] min-h-screen flex flex-col items-center pt-12 md:py-20 overflow-x-hidden" id="all-statements">
+    <section className="problem-section w-full bg-[#1a1a1a] min-h-screen flex flex-col items-center pt-12 md:py-20 overflow-x-hidden relative" id="all-statements">
       <div className="mb-8 leading-none text-center px-4 w-full">
         <span className="font-hoops_brother text-custom-secondary text-[36px] md:text-[47px] block">PROBLEM</span>
         <span className="font-thomeo text-white text-[56px] md:text-[76px] block -mt-2">STATEMENTS</span>
       </div>
       
-      <div className="w-full max-w-6xl md:rounded-2xl bg-transparent md:bg-[#222] md:p-8 flex flex-col items-center">
+      <div className="w-full max-w-6xl md:rounded-2xl bg-transparent md:bg-[#222] md:p-8 flex flex-col items-center relative">
+        {/* Close Button */}
+        <button
+          onClick={() => navigate(-1)}
+          className="absolute top-4 right-4 md:top-8 md:right-8 z-10 bg-black/70 hover:bg-black p-2 rounded-full transition-all duration-200"
+          aria-label="Close PDF"
+        >
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        
         <div className="w-full overflow-hidden">
           <iframe
             ref={pdfRef}

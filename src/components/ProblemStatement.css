@@ -7,6 +7,16 @@
   box-sizing: border-box;
 }
 
+/* Hide scrollbar for Chrome, Safari, Edge */
+.problem-section div[style*="scroll-smooth"]::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.problem-section div[style*="scrollbar-width"] {
+  scrollbar-width: none;
+}
+
 @media (max-width: 640px) {
   .problem-section {
     padding-left: 0.5rem;
