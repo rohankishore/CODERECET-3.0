@@ -32,10 +32,10 @@ export default function FAQCard({ number, question, answer }) {
           </p>
         </div>
         {/* Back Side */}
-        <div className="faq-flip-card-back flex items-center justify-center rounded-[44px] px-10 py-12 min-h-[217px] overflow-hidden"
-          style={{
-            background: `#121212`
-          }}
+        <div
+          className="faq-flip-card-back flex items-center justify-center rounded-[44px] px-10 py-12 min-h-[217px] overflow-hidden cursor-pointer"
+          style={{ background: `#121212` }}
+          onClick={() => setIsFlipped(false)}
         >
           <p className="font-tactic_sans text-base md:text-lg text-custom-white text-center w-full max-w-[360px] mx-auto">
             {answer}
