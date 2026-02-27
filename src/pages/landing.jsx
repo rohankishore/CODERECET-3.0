@@ -245,10 +245,12 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
 
       {showLocation && createPortal(
         <div
-          className={`fixed inset-0 z-[9999] flex items-center justify-center ${locationClosing ? 'animate-[fadeOut_0.5s_ease-in-forwards]' : 'animate-[fadeIn_0.4s_ease-out]'}`}
+          className={`fixed inset-0 z-[99999] flex items-center justify-center ${locationClosing ? 'animate-[fadeOut_0.5s_ease-in-forwards]' : 'animate-[fadeIn_0.4s_ease-out]'}`}
+          style={{ touchAction: 'auto' }}
         >
           <div
             className={`absolute inset-0 bg-black/60 ${locationClosing ? 'animate-[fadeOut_0.5s_ease-in-forwards]' : 'animate-[fadeIn_0.4s_ease-out]'}`}
+            style={{ zIndex: 1, touchAction: 'auto' }}
             onClick={() => {
               setLocationClosing(true);
               blendyRef.current?.untoggle('location');
@@ -259,8 +261,9 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
             }}
           />
           <div
-            className={`bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[500px] relative z-10 ${locationClosing ? 'animate-[fadeOut_0.5s_ease-in-forwards]' : 'animate-[fadeIn_0.4s_ease-out]'}`}
+            className={`bg-custom-black border-2 border-custom-secondary rounded-xl p-6 w-[90vw] max-w-[500px] relative z-[100000] ${locationClosing ? 'animate-[fadeOut_0.5s_ease-in-forwards]' : 'animate-[fadeIn_0.4s_ease-out]'}`}
             data-blendy-to="location"
+            style={{ zIndex: 2, touchAction: 'auto' }}
           >
             <div>
               <div className="flex justify-between items-center mb-4">
