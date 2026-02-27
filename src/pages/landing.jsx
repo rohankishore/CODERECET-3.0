@@ -255,7 +255,7 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
               </div>
               <div className="rounded-lg overflow-hidden" style={{ filter: 'invert(90%) hue-rotate(180deg)' }}>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.27996839653!2d76.88528094100948!3d8.545851629468523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bec79541c519%3A0x98324eb5aafb3778!2sCollege%20of%20Engineering%20Trivandrum%20(CET)!5e1!3m2!1sen!2sin!4v1770842775967!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.27996839653!2d76.88928094100948!3d8.545851629468523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bec79541c519%3A0x98324eb5aafb3778!2sCollege%20of%20Engineering%20Trivandrum%20(CET)!5e1!3m2!1sen!2sin!4v1770842775967!5m2!1sen!2sin"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
