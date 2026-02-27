@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../components/ProblemStatement.css';
 
 const statements = [
@@ -119,50 +119,47 @@ function ProblemStatementCard({ title, summary }) {
   );
 }
 
-import { useEffect, useRef } from "react";
-
 function AllStatementsPage() {
   const pdfRef = useRef(null);
 
   useEffect(() => {
-    // Optionally, you can add logic to auto-scroll or focus
   }, []);
 
   return (
-    <section className="problem-section px-6 py-12 md:py-20 bg-[#1a1a1a] min-h-screen flex flex-col items-center justify-center" id="all-statements">
-      <div className="mb-12 leading-none text-center">
+    <section className="problem-section px-0 md:px-6 py-12 md:py-20 bg-[#1a1a1a] min-h-screen flex flex-col items-center justify-center overflow-x-hidden" id="all-statements">
+      <div className="mb-12 leading-none text-center px-4">
         <span className="font-hoops_brother text-custom-secondary text-[36px] md:text-[47px] block">PROBLEM</span>
         <span className="font-thomeo text-white text-[56px] md:text-[76px] block -mt-2">STATEMENTS</span>
       </div>
-      <div className="w-full max-w-5xl rounded-2xl shadow-2xl overflow-hidden bg-[#222] p-4 md:p-8 flex flex-col items-center">
-        <div className="w-full" style={{overflowX: 'hidden'}}>
+      <div className="w-full max-w-5xl rounded-none md:rounded-2xl shadow-2xl overflow-hidden bg-[#222] p-0 md:p-8 flex flex-col items-center">
+        <div className="w-full overflow-hidden">
           <iframe
             ref={pdfRef}
-            src="/data/questions/questions.pdf#toolbar=0&navpanes=0&scrollbar=0"
+            src="/data/questions/questions.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
             title="Problem Statements PDF"
-            className="w-full rounded-2xl border-4 border-yellow-300 bg-white"
+            className="w-full rounded-none md:rounded-2xl border-0 md:border-4 border-yellow-300 bg-white"
             style={{
               boxShadow: "0 12px 48px rgba(230,248,90,0.18)",
               minHeight: "60vh",
               height: "80vh",
               maxHeight: "90vh",
               width: "100%",
-              maxWidth: "100vw"
+              maxWidth: "100%"
             }}
             frameBorder="0"
           />
         </div>
         <style>{`
-          @media (max-width: 600px) {
+          @media (max-width: 768px) {
             .problem-section iframe {
-              min-height: 90vh !important;
-              height: 120vh !important;
-              width: 100vw !important;
-              max-width: 100vw !important;
-              font-size: 2rem !important;
+              min-height: 85vh !important;
+              height: 85vh !important;
+              width: 100% !important;
+              max-width: 100% !important;
             }
             .problem-section {
               overflow-x: hidden !important;
+              width: 100% !important;
             }
           }
         `}</style>
