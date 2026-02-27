@@ -34,7 +34,7 @@ function LandingPage() {
   ];
 
   return (
-    <div id="landing">
+    <div id="landing" className="overflow-x-hidden">
       <div className="min-h-screen bg-custom-black">
 
         <div className="flex justify-center w-full fixed top-0 sm:top-6 lg:top-8 z-50 px-4">
@@ -209,7 +209,7 @@ function LandingPage() {
           </div>
         </h1>
 
-        <div className="relative flex items-center justify-center w-full overflow-x-hidden" style={{ minHeight: '180px' }}>
+        <div className="relative flex items-center justify-center w-full" style={{ minHeight: '180px' }}>
           <img
             src="/assets/landing/Grid.webp"
             alt="Grid"
