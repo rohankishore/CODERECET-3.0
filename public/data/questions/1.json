@@ -1,0 +1,32 @@
+{
+  "question_id": 1,
+  "title": "Real-Time YOLO11 Ops-Safety Challenge",
+  "vertical_domain": [
+    "AI",
+    "Operational safety"
+  ],
+  "gpu_required": false,
+  "business_context": "In industrial environments like manufacturing floors and warehouses, operational safety is paramount. While YOLO11 Large provides high precision for PPE compliance and monitoring 'No-Go' zones, deploying high-end GPUs across massive facilities is cost-prohibitive. To scale, these models must run on standard industrial PCs or edge gateways relying solely on 8-core CPUs.",
+  "problem_statement": "The 'High-Accuracy, High-Latency' trap prevents YOLO11 Large deployment in CPU-only environments. For a safety system to be actionable, it must process video at a minimum of 10 FPS; current CPU inference often falls well below this, leading to dangerous detection lags.",
+  "challenge": "Optimize the YOLO11 Large inference pipeline to achieve > 10 FPS on a maximum of 8 CPU cores without significant degradation in detection accuracy.",
+  "technical_requirements": {
+    "model_optimization": {
+      "export_and_quantization": "Convert PyTorch model to optimized format with quantization. mAP@0.5 degradation must be ≤ 2% of FP32 baseline.",
+      "runtime": "Leverage CPU-specific acceleration libraries for modern 8-core industrial processors.",
+      "processing_strategy": "Implement sub-frame tiling or adaptive batching. End-to-end processing (pre-process to post-process) for a 1080p frame must be ≤ 100ms."
+    },
+    "pipeline_efficiency": {
+      "architecture": "Use a multi-threaded producer-consumer architecture to decouple frame decoding from inference. Decoding must not block the inference thread.",
+      "sampling": "Implement intelligent frame-skip or keyframe-priority strategies with lightweight object tracking interpolation to sustain ≥ 10 FPS."
+    },
+    "resource_management": {
+      "concurrency": "Support at least 4 simultaneous camera feeds on an 8-core CPU.",
+      "adaptive_control": "Dynamically adjust input resolution (1080p to 720p to 480p) based on CPU load to maintain the 10 FPS floor.",
+      "memory_constraint": "Total RAM consumption (model + buffers + runtime) must not exceed 4 GB."
+    },
+    "safety_reliability": {
+      "consistency": "Zero dropped detections for objects present in ≥ 3 consecutive frames.",
+      "latency_sla": "Total pipeline latency from hazard appearance to alert signal must be ≤ 300ms."
+    }
+  }
+}

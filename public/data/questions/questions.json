@@ -1,0 +1,189 @@
+{
+  "hackathon_metadata": {
+    "name": "CodeReCET 2026",
+    "host": "ARMADA / CET",
+    "year": 2026
+  },
+  "questions": [
+    {
+      "question_id": 1,
+      "title": "Real-Time YOLO11 Ops-Safety Challenge",
+      "vertical_domain": "AI, Operational safety",
+      "gpu_required": false,
+      "summary": "Optimize YOLO11 Large to achieve >10 FPS on an 8-core CPU while maintaining accuracy within 2% of FP32 baseline[cite: 5, 7, 18, 23].",
+      "requirements": [
+        "Quantization and CPU-specific acceleration[cite: 22, 24].",
+        "Multi-threaded producer-consumer pipeline for decoding and inference[cite: 28].",
+        "Support 4 concurrent streams and maintain <300ms alert latency[cite: 32, 39]."
+      ]
+    },
+    {
+      "question_id": 2,
+      "title": "Ultra-Low Latency Scalable Media Engine",
+      "vertical_domain": "AI, Operational safety (Video Infrastructure)",
+      "gpu_required": false,
+      "summary": "Build a containerized streaming engine that ingests RTSP/RTMP and outputs WebRTC (<500ms) and HLS[cite: 42, 44, 54].",
+      "requirements": [
+        "CPU-optimized transcoding with <50ms processing overhead[cite: 58].",
+        "Stateless media nodes on K8s with <1s failover[cite: 62, 63].",
+        "Selective Forwarding Unit (SFU) architecture and Redis-based state management[cite: 64, 67]."
+      ]
+    },
+    {
+      "question_id": 3,
+      "title": "Autonomous Drone based Disaster Intelligence",
+      "vertical_domain": "AI, Operational safety",
+      "gpu_required": true,
+      "summary": "Build an AI pipeline to process drone/satellite imagery and output prioritized damage reports and heat maps[cite: 70, 72, 80].",
+      "requirements": [
+        "Detect collapsed buildings, fires, and flooded zones[cite: 85].",
+        "Assign impact scores and output spatial heat maps in near real-time[cite: 86, 88].",
+        "Web-based visualization dashboard[cite: 90]."
+      ]
+    },
+    {
+      "question_id": 4,
+      "title": "Fair-Queue GPU Load Balancer",
+      "vertical_domain": "AI, Operational safety",
+      "gpu_required": true,
+      "summary": "Maximize YOLOv11 Large throughput on a single GPU with specific hardware constraints (e.g., NVIDIA T4)[cite: 94, 96, 113].",
+      "requirements": [
+        "Minimum 100 FPS throughput on a single GPU[cite: 113].",
+        "Maintain stability under peak load without OOM failures[cite: 111].",
+        "Minimize Glass-to-Detection latency across multiple concurrent streams[cite: 110]."
+      ]
+    },
+    {
+      "question_id": 5,
+      "title": "Proximity-based hazard detection",
+      "vertical_domain": "AI, Operational safety",
+      "gpu_required": true,
+      "summary": "Passive vision system to monitor worker-machine proximity in 3D space using monocular RGB input[cite: 115, 117, 133].",
+      "requirements": [
+        "Detect humans and heavy machinery simultaneously[cite: 132].",
+        "Estimate physical distance and generate alerts for threshold violations[cite: 133, 134].",
+        "Log time and feed info for every hazard event[cite: 135]."
+      ]
+    },
+    {
+      "question_id": 6,
+      "title": "Visual UI Navigation Agent for Operational Platforms",
+      "vertical_domain": "AI, Atlas AI",
+      "gpu_required": true,
+      "summary": "AI agent that understands UI screens via DOM or screenshots to execute workflows via natural language[cite: 138, 140, 157].",
+      "requirements": [
+        "Multimodal input: screenshots, DOM metadata, and natural language[cite: 180, 181, 182].",
+        "Accessibility features: keyboard-navigation, screen-reader summaries, and voice support[cite: 187, 188, 192].",
+        "Safety: explicit confirmation for high-impact actions and role-aware controls[cite: 195]."
+      ]
+    },
+    {
+      "question_id": 7,
+      "title": "Build the Brain of a Space Data Center",
+      "vertical_domain": "Edge, Orbital Data Center",
+      "gpu_required": "Optional",
+      "summary": "Develop software for an autonomous orbital node that handles intermittent connectivity and limited storage[cite: 214, 216, 236].",
+      "requirements": [
+        "Predict communication windows using TLE data and prioritize data transmission[cite: 256, 257].",
+        "Secure, crash-safe vault with AES-256 encryption and integrity checking[cite: 287, 288, 289].",
+        "Sandboxed execution of tasks (WASM/Python) with hard resource limits[cite: 301, 302]."
+      ]
+    },
+    {
+      "question_id": 8,
+      "title": "Power-Budget Aware Orbital Job Scheduler",
+      "vertical_domain": "Edge, Orbital Data Center",
+      "gpu_required": false,
+      "summary": "Scheduler for orbital nodes that balances compute tasks against solar power availability and battery SoC[cite: 326, 328, 338].",
+      "requirements": [
+        "Predict eclipse periods and solar input variability[cite: 353, 354].",
+        "Implement pluggable strategies (EDF, WFQ, Solar-Aware)[cite: 362, 363, 364].",
+        "Safety Governor: suspend non-critical jobs below 30% battery SoC[cite: 369, 370]."
+      ]
+    },
+    {
+      "question_id": 9,
+      "title": "DTN over LoRa/Wi-Fi: Space Mesh Networking",
+      "vertical_domain": "Edge, Networking, Orbital Communications",
+      "gpu_required": false,
+      "summary": "Build a 3-node store-and-forward mesh network resilient to link disruptions[cite: 394, 396, 405].",
+      "requirements": [
+        "Simulate scheduled/unscheduled link blackouts[cite: 416, 417].",
+        "Enforce 3 traffic classes (Critical/Standard/Bulk) with preemption[cite: 426, 427].",
+        "Dashboard for real-time visibility into buffer occupancy and end-to-end latency[cite: 435, 439, 440]."
+      ]
+    },
+    {
+      "question_id": 10,
+      "title": "Offline Voice Assistant for Field Technicians",
+      "vertical_domain": "Edge, Edge AI",
+      "gpu_required": true,
+      "summary": "Fully offline RAG system with voice interface for parsing complex technical documentation[cite: 452, 454, 464].",
+      "requirements": [
+        "Ingest multi-column layouts, tables, and wiring diagrams into RAG[cite: 463, 469].",
+        "End-to-end pipeline: Offline STT → LLM → TTS[cite: 470].",
+        "Resilient to background industrial noise[cite: 467]."
+      ]
+    },
+    {
+      "question_id": 11,
+      "title": "Federated Learning for Edge Anomaly Detection",
+      "vertical_domain": "Edge, Edge AI",
+      "gpu_required": true,
+      "summary": "Collaborative training of an anomaly detection model without sharing raw sensor data[cite: 472, 474, 479].",
+      "requirements": [
+        "Handle non-IID (non-identically distributed) data partitions[cite: 481].",
+        "Independent storage volumes per instance with zero raw data sharing[cite: 484, 487].",
+        "Address class imbalances and skewed distributions in data splits[cite: 488]."
+      ]
+    },
+    {
+      "question_id": 12,
+      "title": "AI Field Troubleshooting Copilot",
+      "vertical_domain": "Connectivity, Atlas AI",
+      "gpu_required": "Optional",
+      "summary": "Natural language copilot to help non-technical personnel diagnose edge equipment issues[cite: 493, 495, 504].",
+      "requirements": [
+        "Analyze photos to identify device types and indicator light states[cite: 519].",
+        "RAG pipeline over equipment manuals and historical support data[cite: 521].",
+        "Automated escalation ticket generation with structured diagnostic packages[cite: 524, 525]."
+      ]
+    },
+    {
+      "question_id": 13,
+      "title": "AI-Generated Daily Operations Briefing",
+      "vertical_domain": "Connectivity, Atlas AI",
+      "gpu_required": "Optional",
+      "summary": "Agent that synthesizes data from multiple systems into a concise, prioritized daily digest[cite: 540, 542, 550].",
+      "requirements": [
+        "Ingest health snapshots, alert logs, usage metrics, and tickets[cite: 563].",
+        "Pattern detection (e.g., recurring offline events, accelerating usage)[cite: 564].",
+        "Role-based personalization for managers vs. analysts[cite: 567]."
+      ]
+    },
+    {
+      "question_id": 14,
+      "title": "AI Anomaly Detection for Satellite Internet Networks",
+      "vertical_domain": "Connectivity, Atlas AI",
+      "gpu_required": "Optional",
+      "summary": "System to distinguish between normal satellite variability and genuine underperformance[cite: 580, 582, 592].",
+      "requirements": [
+        "Per-terminal baselining for throughput, latency, and signal quality[cite: 608, 614].",
+        "Spatial correlation to differentiate local vs. regional issues[cite: 615, 620, 622].",
+        "Explainable alerts with suggested causes and priority ranking[cite: 624, 625, 627]."
+      ]
+    },
+    {
+      "question_id": 15,
+      "title": "Intelligent WAN Path Selection",
+      "vertical_domain": "Connectivity, Atlas AI",
+      "gpu_required": false,
+      "summary": "Routing engine that switches between Satellite, Cellular, and Ethernet based on cost, quality, and location[cite: 639, 641, 655].",
+      "requirements": [
+        "Real-time link scoring based on cost, performance, and reliability[cite: 681, 684].",
+        "Predictive pre-switching for known dead zones or link degradation[cite: 695, 696].",
+        "Application-aware routing (Real-time vs. Bulk vs. Background)[cite: 691, 692]."
+      ]
+    }
+  ]
+}
