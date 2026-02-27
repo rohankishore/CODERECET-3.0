@@ -167,7 +167,8 @@ function LandingPage() {
               <img
                 src="/assets/landing/Grid.webp"
                 alt="Grid"
-                className="absolute left-1/2 -translate-x-1/2 bottom-[-10px] sm:bottom-[-30px] w-full sm:w-[120vw] max-w-none pointer-events-none select-none z-10"
+                className="absolute left-1/2 -translate-x-1/2 bottom-[-10px] sm:bottom-[-30px] w-full max-w-[1200px]
+Add overflow-x-hidden pointer-events-none select-none z-10"
                 draggable="false"
                 style={{ maxWidth: '1200px', opacity: 0.7 }}
               />
