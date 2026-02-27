@@ -106,7 +106,7 @@ function ProblemStatementCard({ title, summary }) {
       height: "100%",
     }}>
       <div
-        className="h-full w-full flex flex-col justify-center p-4 md:p-6"
+        className="h-full w-full flex flex-col justify-start p-4 md:p-6"
         style={{
           borderRadius: "15.6px",
           backgroundColor: "#181818",
