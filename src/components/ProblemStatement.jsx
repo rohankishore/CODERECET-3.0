@@ -113,8 +113,8 @@ function ProblemStatementCard({ title, summary }) {
             "linear-gradient(156.51deg, rgba(250, 250, 250, 0.25) -151.95%, rgba(8, 8, 8, 0.25) 55.32%, rgba(107, 107, 107, 0.25) 202.54%)",
         }}
       >
-        <h3 className="font-bold text-[22px] md:text-[26px] mb-2 text-white">{title}</h3>
-        <p className="text-custom-secondary text-[16px] md:text-[18px]">{summary}</p>
+        <h3 className="font-bold font-tactic_sans text-[22px] md:text-[26px] mb-2 text-white">{title}</h3>
+        <p className="font-tactic_sans text-custom-secondary text-[16px] md:text-[18px]">{summary}</p>
       </div>
     </div>
   );
