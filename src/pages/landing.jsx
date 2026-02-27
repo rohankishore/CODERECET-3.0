@@ -126,7 +126,31 @@ function LandingPage() {
               className={`sm:hidden fixed top-0 left-0 h-screen w-[60%] bg-custom-black z-40 shadow-lg transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"
                 }`}
             >
-              <ul className="space-y-6 flex flex-col p-8 text-custom-white font-tactic_sans text-xl">
+              <div className="relative">
+                {/* Close button for mobile menu */}
+                <button
+                  className="absolute top-2 right-2 p-2 z-50"
+                  aria-label="Close menu"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <span className="sr-only">Close</span>
+                  <img 
+                    src="/assets/navbar/close_white.svg" 
+                    className="w-6 h-6" 
+                    alt="Close"
+                    onError={e => {
+                      e.currentTarget.style.display = 'none';
+                      if (!e.currentTarget.nextSibling) {
+                        const span = document.createElement('span');
+                        span.textContent = '✕';
+                        span.style.fontSize = '24px';
+                        span.style.color = '#fff';
+                        e.currentTarget.parentNode.appendChild(span);
+                      }
+                    }}
+                  />
+                </button>
+                <ul className="space-y-6 flex flex-col p-8 text-custom-white font-tactic_sans text-xl">
                 <li className="text-left">
                   <Link
                     to="about"
@@ -190,6 +214,8 @@ function LandingPage() {
                     </span>
                   </div>
                 </li>
+                </ul>
+              </div>
               </ul>
             </div>
           </nav>
