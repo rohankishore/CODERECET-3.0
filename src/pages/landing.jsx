@@ -209,7 +209,7 @@ function LandingPage() {
           </div>
         </h1>
 
-        <div className="relative flex items-center justify-center w-full" style={{ minHeight: '180px' }}>
+        <div className="relative flex items-center justify-center w-full overflow-x-hidden" style={{ minHeight: '180px' }}>
           <img
             src="/assets/landing/Grid.webp"
             alt="Grid"
@@ -226,7 +226,7 @@ function LandingPage() {
 
           {/* Button container placed on grid */}
     
-          <div className="absolute left-0 right-0 mx-auto flex flex-row justify-between items-center px-4 sm:px-10 top-[60%] md:top-[70%] lg:top-[30%] gap-4">
+          <div className="absolute left-0 right-0 mx-auto flex flex-row flex-wrap justify-between items-center px-4 sm:px-10 top-[60%] md:top-[70%] lg:top-[30%] gap-4">
             <div
               className="w-[140px] sm:w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
               style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
