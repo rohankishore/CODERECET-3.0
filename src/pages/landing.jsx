@@ -287,8 +287,14 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block px-8 py-2 rounded-full border border-custom-secondary font-tactic_sans text-custom-secondary text-lg hover:bg-custom-secondary/10 transition-colors duration-200 shadow-md"
-                    style={{ minHeight: '40px', lineHeight: '1.2', fontWeight: 700 }}
+                    style={{ minHeight: '40px', lineHeight: '1.2', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}
                   >
+                    <img
+                      src="https://maps.gstatic.com/intl/en_us/mapfiles/markers2/measle_blue.png"
+                      alt="Google Maps Logo"
+                      className="w-6 h-6 mr-2"
+                      style={{ background: 'white', borderRadius: '4px', padding: '2px' }}
+                    />
                     Open in Google Maps
                   </a>
                 </div>
