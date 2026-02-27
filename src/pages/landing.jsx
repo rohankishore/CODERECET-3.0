@@ -304,7 +304,21 @@ function LandingPage() {
                     blendyRef.current?.untoggle('location', () => setShowLocation(false));
                   }}
                 >
-                  <img src="/assets/navbar/close_white.svg" className="w-5 h-5" />
+                  <img 
+                    src="/assets/navbar/close_white.svg" 
+                    className="w-5 h-5" 
+                    alt="Close"
+                    onError={e => {
+                      e.currentTarget.style.display = 'none';
+                      if (!e.currentTarget.nextSibling) {
+                        const span = document.createElement('span');
+                        span.textContent = '✕';
+                        span.style.fontSize = '20px';
+                        span.style.color = '#fff';
+                        e.currentTarget.parentNode.appendChild(span);
+                      }
+                    }}
+                  />
                 </button>
               </div>
               <div className="rounded-lg overflow-hidden" style={{ filter: 'invert(90%) hue-rotate(180deg)' }}>
@@ -344,7 +358,21 @@ function LandingPage() {
                     blendyRef.current?.untoggle('calendar', () => setShowCalendar(false));
                   }}
                 >
-                  <img src="/assets/navbar/close_white.svg" className="w-5 h-5" />
+                  <img 
+                    src="/assets/navbar/close_white.svg" 
+                    className="w-5 h-5" 
+                    alt="Close"
+                    onError={e => {
+                      e.currentTarget.style.display = 'none';
+                      if (!e.currentTarget.nextSibling) {
+                        const span = document.createElement('span');
+                        span.textContent = '✕';
+                        span.style.fontSize = '20px';
+                        span.style.color = '#fff';
+                        e.currentTarget.parentNode.appendChild(span);
+                      }
+                    }}
+                  />
                 </button>
               </div>
               <div className="bg-[#2a2a2a] rounded-lg p-4 border border-[#333333]">
