@@ -228,7 +228,7 @@ function LandingPage() {
     
           <div className="absolute left-0 right-0 mx-auto flex flex-row justify-between items-center px-4 sm:px-10 top-[60%] md:top-[70%] lg:top-[30%] gap-4">
             <div
-              className="flex-1 min-w-0 max-w-[180px] sm:max-w-[220px] md:max-w-[260px] border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
+              className="max-w-[180px] sm:max-w-[220px] md:max-w-[260px] border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
               style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
               onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
               onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
@@ -246,7 +246,7 @@ function LandingPage() {
               </div>
             </div>
             <div
-              className="flex-1 min-w-0 max-w-[180px] sm:max-w-[220px] md:max-w-[260px] border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
+              className="max-w-[180px] sm:max-w-[220px] md:max-w-[260px] border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
               style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
               onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 30px rgba(230, 248, 90, 0.5)'}
               onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(230, 248, 90, 0.25)'}
