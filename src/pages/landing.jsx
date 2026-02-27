@@ -219,7 +219,9 @@ function LandingPage() {
               </ul>
             </div>
           </nav>
+          </div>
         </div>
+        
         
 
         <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] relative mt-8 lg:mt-12 w-full">
