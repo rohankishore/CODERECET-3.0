@@ -255,7 +255,7 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
               </div>
               <div className="rounded-lg overflow-hidden" style={{ filter: 'invert(90%) hue-rotate(180deg)' }}>
                 <div className="flex flex-col items-start gap-4 p-4">
-                  <div className="text-custom-secondary font-tactic_sans text-base">
+                  <div className="font-tactic_sans text-base" style={{ color: '#e6f85a' }}>
                     College of Engineering Trivandrum (CET)<br/>
                     Engineering College, Sreekaryam - Kulathoor Rd,<br/>
                     P.O, Sreekaryam, Thiruvananthapuram, Kerala 695016
