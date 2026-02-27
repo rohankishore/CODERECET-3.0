@@ -1,47 +1,10 @@
 .problem-section {
-  /* Responsive padding and background */
   background: #1a1a1a;
   padding-left: 0;
   padding-right: 0;
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
   box-sizing: border-box;
-}
-
-.problem-card {
-  min-height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-.modal {
-  z-index: 1000;
-}
-
-.modal-content {
-  max-height: 80vh;
-  overflow-y: auto;
-  padding: 1rem;
-}
-
-.problem-section h2 {
-  font-family: 'HoopsBrother', sans-serif;
-}
-
-.glassy-card {
-  background: linear-gradient(135deg, #232323 0%, #1a1a1a 100%);
-  border: 1px solid #d6e94a;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
-  backdrop-filter: blur(8px);
-}
-
-.glassy-btn {
-  background: linear-gradient(135deg, #232323 0%, #1a1a1a 100%);
-  border: 1px solid #d6e94a;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
-  backdrop-filter: blur(8px);
 }
 
 @media (max-width: 640px) {
@@ -50,9 +13,9 @@
     padding-right: 0.5rem;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    width: 100vw !important;
+    width: 100%;
+    max-width: 100vw;
     box-sizing: border-box;
-    overflow-x: hidden;
   }
   .problem-card {
     padding: 1rem;
@@ -62,5 +25,12 @@
     box-sizing: border-box;
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+  .grid {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
   }
 }
