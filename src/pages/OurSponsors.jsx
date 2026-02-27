@@ -77,12 +77,19 @@ function OurSponsors() {
                 className="h-[176px] sm:h-[220px] md:h-[296px]"
                 innerClassName="px-8 md:px-12"
               >
-                <img
-                  src="/assets/sponsor/Armada.svg"
-                  alt="Armada"
-                  className="w-[78%] md:w-[62%] max-w-[768px] h-auto object-contain"
-                  style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
-                />
+                <a
+                  href="https://www.armada.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full h-full flex items-center justify-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-custom-yellow"
+                >
+                  <img
+                    src="/assets/sponsor/Armada.svg"
+                    alt="Armada"
+                    className="w-[78%] md:w-[62%] max-w-[768px] h-auto object-contain"
+                    style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
+                  />
+                </a>
               </SponsorBox>
             </div>
           </div>
