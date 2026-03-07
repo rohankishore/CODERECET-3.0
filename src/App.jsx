@@ -13,6 +13,7 @@ import MerchSection from "./pages/merch"
 import FAQSection from "./pages/faq"
 import ProblemStatement from "./components/ProblemStatement"
 import AllStatementsPage from "./pages/AllStatementsPage"
+import RegistrationInstructions from "./pages/registrationInstructions"
 // Add route for all statements page
 // If using react-router-dom v6+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
@@ -76,6 +77,7 @@ function App() {
               </>
             } />
             <Route path="/all-statements" element={<AllStatementsPage />} />
+            <Route path="/registration-instructions" element={<RegistrationInstructions />} />
           </Routes>
         </motion.div>
       </div>

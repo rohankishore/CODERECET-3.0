@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 import { createBlendy } from "blendy";
 
 
@@ -153,6 +154,18 @@ function LandingPage() {
                           Register Now - It's Free
                         </span>
                       </a>
+                    </li>
+                    <li className="text-left mt-2">
+                      <RouterLink
+                        to="/registration-instructions"
+                        className="rounded-full px-4 py-2 cursor-pointer inline-block"
+                        style={{ border: '1px solid rgba(230, 248, 90, 0.3)' }}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <span className="font-tactic_sans text-custom-white text-base">
+                          Registration Instructions
+                        </span>
+                      </RouterLink>
                     </li>
                   </ul>
                 </div>
