@@ -37,6 +37,11 @@ function Footer() {
             <div className="text-white text-base sm:text-lg mb-2 mt-2 md:mt-0 text-center md:text-right">Hackathon Organized by :</div>
             <img src={tinkerhubLogo} className="w-32 sm:w-48 h-auto mb-2 filter invert brightness-100" alt="Tinkerhub" />
             <img src={ietLogo} className="w-32 sm:w-48 h-auto filter invert brightness-100" alt="IET" />
+            <div className="mt-4 text-center md:text-right">
+              <div className="text-white text-base sm:text-lg">Contact</div>
+              <div className="text-white/90 text-sm sm:text-base mt-2">Niyas: <a href="tel:7736348128" className="hover:text-custom-secondary transition-colors">7736348128</a></div>
+              <div className="text-white/90 text-sm sm:text-base">Gopika: <a href="tel:7560879878" className="hover:text-custom-secondary transition-colors">7560879878</a></div>
+            </div>
           </div>
         </div>
       </div>
