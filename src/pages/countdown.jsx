@@ -48,8 +48,6 @@ const Countdown = () => {
         className="w-full rounded-[16.631px] overflow-hidden pt-4 pb-6 px-4 lg:pt-[16.631px] lg:pb-[29.105px] lg:px-[16.631px]"
         style={{
           border: '1.039px solid #e6f85a',
-          backgroundImage:
-            'linear-gradient(174.058deg, rgba(250, 250, 250, 0.3) 151.95%, rgba(8, 8, 8, 0.3) 55.324%, rgba(107, 107, 107, 0.3) 202.54%)',
         }}
       >
         <div className="flex justify-between items-center w-full">
