@@ -18,7 +18,6 @@ function IntroPage({ onScrollDown }) {
           return newValue;
         });
       } else {
-        // Scroll up resets the accumulator
         setScrollAccumulator((prev) => Math.max(0, prev - Math.abs(e.deltaY)));
       }
     };
@@ -40,8 +39,6 @@ function IntroPage({ onScrollDown }) {
 
     window.addEventListener("wheel", handleScroll);
     window.addEventListener("keydown", handleKeyDown);
-
-    // Pulse scroll indicator
     const interval = setInterval(() => {
       setScrollIndicator((prev) => !prev);
     }, 1500);
@@ -55,7 +52,6 @@ function IntroPage({ onScrollDown }) {
 
   return (
     <div className="fixed inset-0 w-full h-screen bg-custom-black flex flex-col items-center justify-center overflow-hidden z-50">
-      {/* Title */}
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -64,8 +60,6 @@ function IntroPage({ onScrollDown }) {
       >
         Code re<span className="text-custom-yellow">CET</span>
       </motion.h1>
-
-      {/* Floating Cube */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{
@@ -90,8 +84,6 @@ function IntroPage({ onScrollDown }) {
           className="w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] object-contain"
         />
       </motion.div>
-
-      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: scrollIndicator ? 1 : 0.3 }}

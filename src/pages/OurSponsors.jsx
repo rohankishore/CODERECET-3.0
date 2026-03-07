@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 const sponsorCardStyle = {
   padding: "1.04px",
   borderRadius: "16.63px",

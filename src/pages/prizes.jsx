@@ -7,7 +7,6 @@ export default function Prizes() {
       className="bg-custom-black w-full py-16 md:py-24 overflow-hidden lg:-mt-20"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[100px]">
-        {/* Section Title */}
         <div className="mb-12 md:mb-[210px] leading-none">
           <p className="font-hoops_brother text-[36px] md:text-[47px] text-custom-secondary">
             OUR
@@ -16,8 +15,6 @@ export default function Prizes() {
             PRIZES
           </p>
         </div>
-
-        {/* Prize Images */}
         <div className="flex flex-col lg:-mt-20">
           <img
             src="/assets/prizes/First.webp"

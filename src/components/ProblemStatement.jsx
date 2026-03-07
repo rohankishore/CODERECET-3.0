@@ -171,7 +171,6 @@ function ProblemStatement() {
         </div>
         
         <div className="relative">
-        {/* Left Arrow */}
         {showLeftArrow && (
           <button
             onClick={() => scroll('left')}
@@ -183,8 +182,6 @@ function ProblemStatement() {
             </svg>
           </button>
         )}
-
-        {/* Scroll Container */}
         <div
           ref={scrollContainerRef}
           className="flex gap-6 overflow-x-auto scroll-smooth pb-4"
@@ -206,8 +203,6 @@ function ProblemStatement() {
             </div>
           ))}
         </div>
-
-        {/* Right Arrow */}
         {showRightArrow && (
           <button
             onClick={() => scroll('right')}

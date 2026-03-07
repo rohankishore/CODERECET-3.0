@@ -135,7 +135,6 @@ function AllStatementsPage() {
       </div>
       
       <div className="w-full max-w-6xl md:rounded-2xl bg-transparent md:bg-[#222] md:p-8 flex flex-col items-center relative">
-        {/* Close Button */}
         <button
           onClick={() => navigate(-1)}
           className="absolute top-4 right-4 md:top-8 md:right-8 z-10 bg-black/70 hover:bg-black p-2 rounded-full transition-all duration-200"

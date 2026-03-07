@@ -212,7 +212,6 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
 
               <div className="absolute left-0 right-0 mx-auto flex flex-row flex-wrap justify-between items-center px-4 sm:px-10 top-[60%] md:top-[70%] lg:top-[30%] gap-4">
                 <div className="relative w-[110px] sm:w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px]">
-                  {/* Actual visible button */}
                   <div
                     className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
                     style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
@@ -225,7 +224,6 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                       <div className="text-xs sm:text-sm lg:text-base text-custom-white font-tactic_sans">March</div>
                     </div>
                   </div>
-                  {/* Invisible clickable overlay above everything, including the cube */}
                   <button
                     aria-label="Open calendar modal"
                     className="absolute inset-0 w-full h-full z-30 cursor-pointer"
@@ -237,7 +235,6 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                   />
                 </div>
                 <div className="relative w-[110px] sm:w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px]">
-                  {/* Actual visible button */}
                   <div
                     className="border border-custom-secondary rounded-lg px-4 py-3 sm:px-6 sm:py-4 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-custom-secondary/10 bg-opacity-80 backdrop-blur-sm"
                     style={{ boxShadow: '0 0 20px rgba(230, 248, 90, 0.25)' }}
@@ -250,7 +247,6 @@ Add overflow-x-hidden pointer-events-none select-none z-10"
                       <div className="text-xs sm:text-sm lg:text-sm text-custom-white font-tactic_sans">Join Us At</div>
                     </div>
                   </div>
-                  {/* Invisible clickable overlay above everything, including the cube */}
                   <button
                     aria-label="Open location modal"
                     className="absolute inset-0 w-full h-full z-30 cursor-pointer"

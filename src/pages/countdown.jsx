@@ -51,7 +51,6 @@ const Countdown = () => {
         }}
       >
         <div className="flex justify-between items-center w-full">
-          {/* Days */}
           <div className="flex-1 flex flex-col items-center justify-center pb-2 sm:pb-4 lg:pb-[24px]">
             <div className="font-thomeo text-5xl sm:text-7xl md:text-9xl lg:text-[200px] text-custom-white leading-none">
               {timeLeft.days}
@@ -60,14 +59,10 @@ const Countdown = () => {
               DAYS
             </div>
           </div>
-
-          {/* Colon */}
           <div className="flex flex-col items-center justify-center pb-6 sm:pb-10 lg:pb-[45px]">
             <span className="font-thomeo text-5xl sm:text-7xl md:text-9xl lg:text-[200px] text-custom-secondary leading-none">:</span>
             <span className="font-satoshi_v text-[10px] sm:text-sm md:text-lg lg:text-[33.263px] opacity-0 leading-none">HOURS</span>
           </div>
-
-          {/* Hours */}
           <div className="flex-1 flex flex-col items-center justify-center pb-2 sm:pb-4 lg:pb-[24px]">
             <div className="font-thomeo text-5xl sm:text-7xl md:text-9xl lg:text-[200px] text-custom-white leading-none">
               {timeLeft.hours}
@@ -76,14 +71,10 @@ const Countdown = () => {
               HOURS
             </div>
           </div>
-
-          {/* Colon */}
           <div className="flex flex-col items-center justify-center pb-6 sm:pb-10 lg:pb-[45px]">
             <span className="font-thomeo text-5xl sm:text-7xl md:text-9xl lg:text-[200px] text-custom-secondary leading-none">:</span>
             <span className="font-satoshi_v text-[10px] sm:text-sm md:text-lg lg:text-[33.263px] opacity-0 leading-none">HOURS</span>
           </div>
-
-          {/* Minutes */}
           <div className="flex-1 flex flex-col items-center justify-center pb-2 sm:pb-4 lg:pb-[24px]">
             <div className="font-thomeo text-5xl sm:text-7xl md:text-9xl lg:text-[200px] text-custom-white leading-none">
               {timeLeft.minutes}
@@ -92,14 +83,10 @@ const Countdown = () => {
               MINUTES
             </div>
           </div>
-
-          {/* Colon */}
           <div className="flex flex-col items-center justify-center pb-6 sm:pb-10 lg:pb-[45px]">
             <span className="font-thomeo text-5xl sm:text-7xl md:text-9xl lg:text-[200px] text-custom-secondary leading-none">:</span>
             <span className="font-satoshi_v text-[10px] sm:text-sm md:text-lg lg:text-[33.263px] opacity-0 leading-none">HOURS</span>
           </div>
-
-          {/* Seconds */}
           <div className="flex-1 flex flex-col items-center justify-center pb-2 sm:pb-4 lg:pb-[24px]">
             <div className="font-thomeo text-5xl sm:text-7xl md:text-9xl lg:text-[200px] text-custom-white leading-none">
               {timeLeft.seconds}

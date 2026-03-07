@@ -3,7 +3,6 @@ import "../App.css";
 
 export default function MerchSection() {
   useEffect(() => {
-    // Dynamically load Devfolio SDK
     const script = document.createElement('script');
     script.src = 'https://apply.devfolio.co/v2/sdk.js';
     script.async = true;
@@ -19,8 +18,6 @@ export default function MerchSection() {
 
   return (
     <div className="relative isolate flex flex-col items-center justify-center w-full bg-custom-black py-20 md:py-40 px-4 min-h-[500px] md:min-h-[600px] overflow-hidden">
-      
-      {/* Background Mask - Fixed absolute positioning so it doesn't break document flow */}
       <img
         src="/assets/merch/merch_mask.webp"
         alt=""
@@ -31,26 +28,18 @@ export default function MerchSection() {
           opacity: 0.8
         }}
       />
-
-      {/* Content Wrapper - Removed negative margins and used Flexbox gap for clean spacing */}
       <div className="relative z-10 flex flex-col items-center justify-center w-full gap-8 md:gap-12">
-        
-        {/* Top Graphic */}
         <img
           src="/assets/merch/isthatall.webp"
           alt="Is That All?"
           className="relative z-20 w-48 sm:w-80 md:w-96 drop-shadow-lg"
         />
-        
-        {/* Subtitle */}
         <p
           className="text-custom-white text-center text-sm sm:text-lg max-w-[280px] sm:max-w-xl leading-relaxed"
           style={{ fontFamily: 'TacticSans' }}
         >
           Every one who gets selected gets Goodies! T-Shirts, stickers, you name it!
         </p>
-
-        {/* Devfolio Button Area */}
         <div className="w-full flex flex-col items-center justify-center mt-4 md:mt-8 gap-4">
           <div className="flex items-center justify-center w-full max-w-[312px] min-h-[44px]">
             <div

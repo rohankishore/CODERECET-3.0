@@ -6,13 +6,9 @@
   max-width: 100vw;
   box-sizing: border-box;
 }
-
-/* Hide scrollbar for Chrome, Safari, Edge */
 .problem-section div[style*="scroll-smooth"]::-webkit-scrollbar {
   display: none;
 }
-
-/* Hide scrollbar for Firefox */
 .problem-section div[style*="scrollbar-width"] {
   scrollbar-width: none;
 }

@@ -7,17 +7,12 @@ function AboutUs() {
       className="min-h-screen bg-custom-black flex justify-center items-start mx-auto w-full px-8 lg:px-32 py-16 lg:py-24"
     >
       <div className="max-w-6xl w-full">
-        {/* About Header */}
         <h1 className="font-hoops_brother text-6xl lg:text-8xl mb-4" style={{ color: 'var(--color-secondary)' }}>
           ABOUT
         </h1>
-        
-        {/* Code ReCET Title */}
         <h2 className="font-thomeo text-4xl lg:text-6xl text-custom-white mb-8">
           CODE RECET
         </h2>
-        
-        {/* Description Paragraphs */}
         <div className="space-y-6 font-tactic_sans text-custom-white text-base lg:text-lg leading-relaxed">
           <p>
             Code ReCET 3.0 is a 36-hour hackathon that blends innovation, creativity and pure coding bliss! Conducted collaboratively by TinkerHub CET and IET on campus CET, this hackathon is set to ignite the tech spirit at College of Engineering, Trivandrum.
