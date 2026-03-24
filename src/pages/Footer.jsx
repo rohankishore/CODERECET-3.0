@@ -1,10 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import twitterLogo from "/assets/footer/twitter-logo.svg";
-import facebookLogo from "/assets/footer/facebook-logo.svg";
-import discordLogo from "/assets/footer/discord-logo.svg";
-import linkedinLogo from "/assets/footer/linkedin-logo.svg";
-import githubLogo from "/assets/footer/github-logo.svg";
+import { FaEnvelope, FaLinkedin, FaInstagram } from "react-icons/fa";
 import tinkerhubLogo from "/assets/footer/tinkerhub.webp";
 import ietLogo from "/assets/footer/IET.webp";
 
@@ -19,18 +15,22 @@ function Footer() {
             </div>
             <div className="mb-4"></div>
             <nav className="flex flex-col gap-2 sm:gap-4 text-white text-base sm:text-lg font-tactic_sans items-center md:items-start">
-              <a href="#landing" className="flex items-center gap-2"><span className="text-custom-secondary text-xl">&gt;</span> Home</a>
-              <a href="#about" className="flex items-center gap-2"><span className="text-custom-secondary text-xl">&gt;</span> About Us</a>
-              <a href="#events" className="flex items-center gap-2"><span className="text-custom-secondary text-xl">&gt;</span> Events</a>
-              <a href="#gallery" className="flex items-center gap-2"><span className="text-custom-secondary text-xl">&gt;</span> Gallery</a>
-              <a href="#team" className="flex items-center gap-2"><span className="text-custom-secondary text-xl">&gt;</span> Our Team</a>
+              <a href="#about" className="flex items-center gap-2"><span className="text-custom-secondary text-xl">&gt;</span> About</a>
+              <a href="#countdown" className="flex items-center gap-2"><span className="text-custom-secondary text-xl">&gt;</span> Timeline</a>
+              <a href="#perks" className="flex items-center gap-2"><span className="text-custom-secondary text-xl">&gt;</span> Perks</a>
+              <a href="#prizes" className="flex items-center gap-2"><span className="text-custom-secondary text-xl">&gt;</span> Prizes</a>
+              <a href="#sponsors" className="flex items-center gap-2"><span className="text-custom-secondary text-xl">&gt;</span> Sponsors</a>
             </nav>
             <div className="flex gap-4 sm:gap-8 mt-6 sm:mt-8 font-tactic_sans justify-center md:justify-start">
-              <a href="https://twitter.com/coderecet" target="_blank" rel="noopener noreferrer"><img src={twitterLogo} alt="Twitter" className="w-10 h-10" /></a>
-              <a href="https://facebook.com/coderecet" target="_blank" rel="noopener noreferrer"><img src={facebookLogo} alt="Facebook" className="w-10 h-10" /></a>
-              <a href="https://discord.gg/coderecet" target="_blank" rel="noopener noreferrer"><img src={discordLogo} alt="Discord" className="w-10 h-10" /></a>
-              <a href="https://linkedin.com/company/coderecet" target="_blank" rel="noopener noreferrer"><img src={linkedinLogo} alt="LinkedIn" className="w-10 h-10" /></a>
-              <a href="https://github.com/coderecet" target="_blank" rel="noopener noreferrer"><img src={githubLogo} alt="GitHub" className="w-10 h-10" /></a>
+              <a href="mailto:coderecet@gmail.com" rel="noopener noreferrer" aria-label="Gmail">
+                <FaEnvelope size={36} color="#fffffa" />
+              </a>
+              <a href="https://www.linkedin.com/in/code-recet-6380b92aa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FaLinkedin size={36} color="#fffffa" />
+              </a>
+              <a href="https://www.instagram.com/coderecet" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <FaInstagram size={36} color="#fffffa" />
+              </a>
             </div>
           </div>
           <div className="flex flex-col items-center md:items-end w-full md:w-1/2 gap-4 sm:gap-6 font-tactic_sans mt-8 md:mt-0">
