@@ -117,6 +117,21 @@ function OurSponsors() {
               </SponsorBox>
 
               <SponsorBox className="h-[140px] sm:h-[160px] md:h-[178px]" innerClassName="p-4">
+                <a
+                  href="https://www.linkedin.com/company/osenofficial/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-custom-yellow"
+                >
+                  <img
+                    src="/assets/sponsor/OSEN.png"
+                    alt="OSEN"
+                    className="h-[32px] sm:h-[48px] md:h-[64px] w-auto object-contain"
+                  />
+                </a>
+              </SponsorBox>
+
+              <SponsorBox className="h-[140px] sm:h-[160px] md:h-[178px]" innerClassName="p-4">
                 <img
                   src="/assets/sponsor/buildClub.webp"
                   alt="BuildClub"
